@@ -582,76 +582,82 @@
   </div>
 </div>
 
-<!-- Get Started Section - Redesigned Layout with Valorant border -->
-<div class="full-section" id="apply" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); position: relative;">
+<!-- Get Started Section - Improved UI Design -->
+<div class="full-section" id="apply" style="background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%); position: relative; overflow: hidden;">
+  <!-- Subtle background pattern -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; pointer-events: none; background-image: radial-gradient(circle at 25% 40%, #3b82f6 1px, transparent 1px); background-size: 40px 40px;"></div>
+  
   <div class="inner-container" style="position: relative; z-index: 2;">
-    <!-- Centered header -->
-    <div style="text-align: center; margin-bottom: 60px;">
-      <div style="display: inline-block; background: #eef2ff; padding: 6px 16px; border-radius: 100px; font-size: 12px; font-weight: 600; color: #1a2c3e; margin-bottom: 20px;">Get Started</div>
-      <h2 style="font-family: 'Space Grotesk'; font-size: clamp(36px, 5vw, 48px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px;">Start your journey <br>in minutes</h2>
-      <p style="color: #5a6874; max-width: 500px; margin: 0 auto;">With our personalized small business loans, achieve financial freedom while fueling your business growth.</p>
+    <!-- Centered header - cleaner typography -->
+    <div style="text-align: center; margin-bottom: 70px;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(59,130,246,0.1); backdrop-filter: blur(4px); padding: 6px 20px; border-radius: 100px; font-size: 12px; font-weight: 600; color: #3b82f6; margin-bottom: 24px; border: 1px solid rgba(59,130,246,0.2);">
+        <span style="display: inline-block; width: 6px; height: 6px; background: #3b82f6; border-radius: 50%;"></span>
+        Get Started
+      </div>
+      <h2 style="font-family: 'Space Grotesk'; font-size: clamp(40px, 6vw, 56px); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; background: linear-gradient(135deg, #1a2c3e, #2d4a6e); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Start your journey in minutes</h2>
+      <p style="color: #5a6874; max-width: 520px; margin: 0 auto; font-size: 16px; line-height: 1.6;">With our personalized small business loans, achieve financial freedom while fueling your business growth.</p>
     </div>
 
-    <!-- 3 Column Feature Cards -->
-    <div class="grid-3" style="margin-bottom: 60px;">
-      <div class="card valorant-border" style="text-align: center; padding: 32px 24px; position: relative; border: none;">
-        <div style="width: 70px; height: 70px; background: #eef2ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=60&h=60&fit=crop" style="width: 50px; height: 50px; border-radius: 14px; object-fit: cover;">
+    <!-- 3 Column Feature Cards - Improved hover and design -->
+    <div class="grid-3" style="margin-bottom: 70px;">
+      <div class="card valorant-border" style="text-align: center; padding: 36px 28px; position: relative; border: none; transition: all 0.3s ease; background: white; border-radius: 28px;">
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #eef2ff, #e0e7ff); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
-        <div style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">No Application Fee</div>
-        <p style="color: #5a6874; font-size: 13px;">Zero hidden fees. Transparent process from start to finish.</p>
+        <div style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #1a2c3e;">No Application Fee</div>
+        <p style="color: #5a6874; font-size: 14px; line-height: 1.6;">Zero hidden fees. Transparent process from start to finish.</p>
       </div>
-      <div class="card valorant-border" style="text-align: center; padding: 32px 24px; position: relative; border: none;">
-        <div style="width: 70px; height: 70px; background: #eef2ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=60&h=60&fit=crop" style="width: 50px; height: 50px; border-radius: 14px; object-fit: cover;">
+      <div class="card valorant-border" style="text-align: center; padding: 36px 28px; position: relative; border: none; transition: all 0.3s ease; background: white; border-radius: 28px;">
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #eef2ff, #e0e7ff); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
-        <div style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Quick Funding</div>
-        <p style="color: #5a6874; font-size: 13px;">Approved in days, funded within a week. Streamlined evaluation.</p>
+        <div style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #1a2c3e;">Quick Funding</div>
+        <p style="color: #5a6874; font-size: 14px; line-height: 1.6;">Approved in days, funded within a week. Streamlined evaluation.</p>
       </div>
-      <div class="card valorant-border" style="text-align: center; padding: 32px 24px; position: relative; border: none;">
-        <div style="width: 70px; height: 70px; background: #eef2ff; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=60&h=60&fit=crop" style="width: 50px; height: 50px; border-radius: 14px; object-fit: cover;">
+      <div class="card valorant-border" style="text-align: center; padding: 36px 28px; position: relative; border: none; transition: all 0.3s ease; background: white; border-radius: 28px;">
+        <div style="width: 72px; height: 72px; background: linear-gradient(135deg, #eef2ff, #e0e7ff); border-radius: 24px; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 22v-4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
         </div>
-        <div style="font-size: 20px; font-weight: 700; margin-bottom: 8px;">Low Interest Rates</div>
-        <p style="color: #5a6874; font-size: 13px;">Flexible terms tailored to your cash flow. Designed for growth.</p>
+        <div style="font-size: 20px; font-weight: 700; margin-bottom: 10px; color: #1a2c3e;">Low Interest Rates</div>
+        <p style="color: #5a6874; font-size: 14px; line-height: 1.6;">Flexible terms tailored to your cash flow. Designed for growth.</p>
       </div>
     </div>
 
-    <!-- Loan Amount Calculator Section with Valorant border -->
-    <div class="valorant-border" style="background: white; border-radius: 32px; padding: 48px; margin-bottom: 60px; border: none; box-shadow: 0 8px 24px rgba(0,0,0,0.04); position: relative;">
+    <!-- Loan Amount Calculator - Improved layout -->
+    <div class="valorant-border" style="background: white; border-radius: 32px; padding: 48px; margin-bottom: 70px; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08); position: relative; transition: all 0.3s ease;">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
         <div>
-          <div style="font-family: 'Space Grotesk'; font-weight: 600; font-size: 13px; letter-spacing: 0.1em; color: #8e9db5; margin-bottom: 12px;">HOW MUCH CAPITAL?</div>
-          <div style="font-size: 48px; font-weight: 700; font-family: 'Space Grotesk'; color: #1a2c3e;">$5K – $500K</div>
-          <div style="display: flex; gap: 24px; margin-top: 20px; flex-wrap: wrap;">
-            <div><span style="font-weight: 700; color: #1a2c3e;">0%</span><br><span style="font-size: 11px; color: #5a6874;">application fee</span></div>
-            <div><span style="font-weight: 700; color: #1a2c3e;">24h</span><br><span style="font-size: 11px; color: #5a6874;">decision time</span></div>
-            <div><span style="font-weight: 700; color: #1a2c3e;">6.5%</span><br><span style="font-size: 11px; color: #5a6874;">starting APR</span></div>
+          <div style="font-family: 'Space Grotesk'; font-weight: 600; font-size: 12px; letter-spacing: 0.12em; color: #3b82f6; margin-bottom: 12px;">HOW MUCH CAPITAL?</div>
+          <div style="font-size: 52px; font-weight: 700; font-family: 'Space Grotesk'; color: #1a2c3e; letter-spacing: -0.02em;">$5K – $500K</div>
+          <div style="display: flex; gap: 32px; margin-top: 24px; flex-wrap: wrap;">
+            <div><span style="font-weight: 700; font-size: 18px; color: #1a2c3e;">0%</span><br><span style="font-size: 12px; color: #5a6874;">application fee</span></div>
+            <div><span style="font-weight: 700; font-size: 18px; color: #1a2c3e;">24h</span><br><span style="font-size: 12px; color: #5a6874;">decision time</span></div>
+            <div><span style="font-weight: 700; font-size: 18px; color: #1a2c3e;">6.5%</span><br><span style="font-size: 12px; color: #5a6874;">starting APR</span></div>
           </div>
         </div>
-        <div>
-          <a href="#" class="btn btn-primary" style="padding: 14px 36px; font-size: 14px; background: #1a2c3e;">Apply Now — Free →</a>
-          <div style="font-family: 'Space Grotesk'; font-size: 12px; color: #8e9db5; margin-top: 12px; text-align: center;">( Quick Apply )</div>
+        <div style="text-align: center;">
+          <a href="#" class="btn" style="padding: 16px 42px; font-size: 14px; background: #1a2c3e; color: white; border-radius: 100px; text-decoration: none; display: inline-block; font-weight: 600; transition: all 0.2s ease;">Apply Now — Free →</a>
+          <div style="font-family: 'Space Grotesk'; font-size: 12px; color: #8e9db5; margin-top: 14px;">( Quick Apply )</div>
         </div>
       </div>
     </div>
 
-    <!-- Stats row with Valorant borders -->
-    <div class="stats-grid" style="margin-top: 0;">
-      <div class="stat-item valorant-border" style="padding: 40px; position: relative;">
-        <div style="font-size: 52px; font-weight: 800; font-family:'Space Grotesk'; color: #1a2c3e;">3,000+</div>
-        <div style="font-size: 13px; color:#5a6874; margin-top: 8px;">applications processed</div>
-        <div style="width: 40px; height: 2px; background: #3b82f6; margin: 16px auto 0;"></div>
+    <!-- Stats row - Cleaner design -->
+    <div class="stats-grid" style="margin-top: 0; gap: 20px; background: transparent; display: grid; grid-template-columns: repeat(3, 1fr);">
+      <div class="valorant-border" style="background: white; border-radius: 28px; padding: 40px 24px; text-align: center; transition: all 0.3s ease;">
+        <div style="font-size: 56px; font-weight: 800; font-family:'Space Grotesk'; color: #1a2c3e; margin-bottom: 8px;">3,000+</div>
+        <div style="font-size: 13px; color:#5a6874;">applications processed</div>
+        <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #3b82f6, transparent); margin: 20px auto 0;"></div>
       </div>
-      <div class="stat-item valorant-border" style="padding: 40px; position: relative;">
-        <div style="font-size: 52px; font-weight: 800; font-family:'Space Grotesk'; color: #1a2c3e;">6+</div>
-        <div style="font-size: 13px; color:#5a6874; margin-top: 8px;">years of expertise</div>
-        <div style="width: 40px; height: 2px; background: #3b82f6; margin: 16px auto 0;"></div>
+      <div class="valorant-border" style="background: white; border-radius: 28px; padding: 40px 24px; text-align: center; transition: all 0.3s ease;">
+        <div style="font-size: 56px; font-weight: 800; font-family:'Space Grotesk'; color: #1a2c3e; margin-bottom: 8px;">6+</div>
+        <div style="font-size: 13px; color:#5a6874;">years of expertise</div>
+        <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #3b82f6, transparent); margin: 20px auto 0;"></div>
       </div>
-      <div class="stat-item valorant-border" style="padding: 40px; position: relative;">
-        <div style="font-size: 52px; font-weight: 800; font-family:'Space Grotesk'; color: #1a2c3e;">$500K</div>
-        <div style="font-size: 13px; color:#5a6874; margin-top: 8px;">max funding available</div>
-        <div style="width: 40px; height: 2px; background: #3b82f6; margin: 16px auto 0;"></div>
+      <div class="valorant-border" style="background: white; border-radius: 28px; padding: 40px 24px; text-align: center; transition: all 0.3s ease;">
+        <div style="font-size: 56px; font-weight: 800; font-family:'Space Grotesk'; color: #1a2c3e; margin-bottom: 8px;">$500K</div>
+        <div style="font-size: 13px; color:#5a6874;">max funding available</div>
+        <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #3b82f6, transparent); margin: 20px auto 0;"></div>
       </div>
     </div>
   </div>
