@@ -17,3 +17,6 @@ Route::get('/loans',function(){
 Route::get('/contact',function(){
     return view('contact');
 })->name('contact-page');
+Route::get('/sba-loan',function(){
+    return view('loans.sba-loan');
+})->name('sba-loan');

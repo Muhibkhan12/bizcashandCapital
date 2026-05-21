@@ -575,46 +575,152 @@
         </div>
     </section>
 
-    <!-- FAQs -->
-    <section style="padding: 5rem 0; background: white;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
-                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #e8f0e8; padding: 0.25rem 1rem; margin-bottom: 1rem;">
-                    <span style="width: 6px; height: 6px; background: #1a7a4a;"></span>
-                    <span style="font-size: 0.7rem; font-weight: 600; color: #1a7a4a;">FAQS</span>
-                </div>
-                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">What our customers are looking about</h2>
+<!-- FAQs - With Background Video -->
+<section style="padding: 5rem 0; position: relative; overflow: hidden;">
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover" style="z-index: 0;">
+        <source src="https://cdn.pixabay.com/video/2023/06/28/169818-841105685_large.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Dark Gradient Overlay -->
+    <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,122,74,0.92) 0%, rgba(15,90,56,0.95) 100%); z-index: 1;"></div>
+    
+    <!-- Subtle Pattern Overlay -->
+    <div style="position: absolute; inset: 0; background-image: radial-gradient(circle at 25% 40%, #c8e86a 1px, transparent 1px); background-size: 40px 40px; opacity: 0.1; z-index: 1;"></div>
+    
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 2;">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto;">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); padding: 0.35rem 1.25rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2);">
+                <span style="width: 8px; height: 8px; background: #c8e86a; animation: pulse 2s infinite;"></span>
+                <span style="font-size: 0.7rem; font-weight: 700; color: white; letter-spacing: 0.08em;">FAQS</span>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
-                <div style="background: linear-gradient(135deg, #1a7a4a, #0f5a38); padding: 2rem; color: white;">
-                    <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Know more about BizCashAndCapital</h3>
-                    <p style="margin-bottom: 1.5rem;">BizCashAndCapital is a loan providing company that specializes in lending business cash solutions to small and medium-sized enterprises.</p>
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <div>📞 +1 (216) 647-0007</div>
-                        <div>✉️ info@bizcashandcapital.com</div>
+            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: white;">What our customers are looking about</h2>
+            <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0 auto;"></div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+            <!-- Left Side - Info Card (Glassmorphism) -->
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); padding: 2rem; color: white; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;"
+                 onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.transform='translateY(-5px)';"
+                 onmouseout="this.style.background='rgba(255,255,255,0.1)'; this.style.transform='translateY(0)';">
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                    <div style="width: 50px; height: 50px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c8e86a" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 16v-4M12 8h.01"/>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700;">Know more about BizCashAndCapital</h3>
+                </div>
+                <p style="margin-bottom: 1.5rem; line-height: 1.6; opacity: 0.9;">BizCashAndCapital is a loan providing company that specializes in lending business cash solutions to small and medium-sized enterprises. We offer a range of flexible loan programs to help businesses meet their working capital needs.</p>
+                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2);">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="width: 36px; height: 36px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.7rem; opacity: 0.7;">Call us</p>
+                            <a href="tel:+12166470007" style="color: white; text-decoration: none; font-weight: 600;">+1 (216) 647-0007</a>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div style="width: 36px; height: 36px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p style="font-size: 0.7rem; opacity: 0.7;">Email us</p>
+                            <a href="mailto:info@bizcashandcapital.com" style="color: white; text-decoration: none; font-weight: 600;">info@bizcashandcapital.com</a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div class="faq-item" onclick="this.classList.toggle('open')">
-                        <div class="faq-question"><span>How does BizCashAndCapital work?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer">Easy application Step for Loan. Streamlined online application, holistic review, and funding within days.</div>
+            </div>
+            
+            <!-- Right Side - FAQ Items (Glassmorphism) -->
+            <div>
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                     onmouseover="this.style.background='rgba(255,255,255,0.15)';"
+                     onmouseout="this.style.background='rgba(255,255,255,0.1)';">
+                    <div class="faq-question" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600;">
+                        <span>How does BizCashAndCapital work?</span>
+                        <span class="faq-icon" style="font-size: 1.25rem; transition: transform 0.2s; color: #c8e86a;">+</span>
                     </div>
-                    <div class="faq-item" onclick="this.classList.toggle('open')">
-                        <div class="faq-question"><span>No worries about a bad credit score?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer">We specialize in loans for businesses with low credit scores, evaluating the full picture of your business health.</div>
+                    <div class="faq-answer" style="display: none; padding: 0 1.25rem 1.25rem 1.25rem; color: rgba(255,255,255,0.8); font-size: 0.875rem; line-height: 1.6;">
+                        Easy application Step for Loan. Streamlined online application, holistic review, and funding within days.
                     </div>
-                    <div class="faq-item" onclick="this.classList.toggle('open')">
-                        <div class="faq-question"><span>Criteria for Loan Application</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer">The eligibility criteria are pretty simple, you should have 6 months business running.</div>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                     onmouseover="this.style.background='rgba(255,255,255,0.15)';"
+                     onmouseout="this.style.background='rgba(255,255,255,0.1)';">
+                    <div class="faq-question" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600;">
+                        <span>No worries about a bad credit score?</span>
+                        <span class="faq-icon" style="font-size: 1.25rem; transition: transform 0.2s; color: #c8e86a;">+</span>
                     </div>
-                    <div class="faq-item" onclick="this.classList.toggle('open')">
-                        <div class="faq-question"><span>How fast can I get funded?</span><span class="faq-icon">+</span></div>
-                        <div class="faq-answer">Most applications approved within 24-72 hours, with funding within a week.</div>
+                    <div class="faq-answer" style="display: none; padding: 0 1.25rem 1.25rem 1.25rem; color: rgba(255,255,255,0.8); font-size: 0.875rem; line-height: 1.6;">
+                        We specialize in loans for businesses with low credit scores, evaluating the full picture of your business health.
+                    </div>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                     onmouseover="this.style.background='rgba(255,255,255,0.15)';"
+                     onmouseout="this.style.background='rgba(255,255,255,0.1)';">
+                    <div class="faq-question" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600;">
+                        <span>Criteria for Loan Application</span>
+                        <span class="faq-icon" style="font-size: 1.25rem; transition: transform 0.2s; color: #c8e86a;">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none; padding: 0 1.25rem 1.25rem 1.25rem; color: rgba(255,255,255,0.8); font-size: 0.875rem; line-height: 1.6;">
+                        The eligibility criteria are pretty simple, you should have 6 months business running. If not a business running, then we have different types of loans for different business growth needs.
+                    </div>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2); margin-bottom: 1rem; cursor: pointer; transition: all 0.3s ease;"
+                     onmouseover="this.style.background='rgba(255,255,255,0.15)';"
+                     onmouseout="this.style.background='rgba(255,255,255,0.1)';">
+                    <div class="faq-question" style="padding: 1.25rem; display: flex; justify-content: space-between; align-items: center; color: white; font-weight: 600;">
+                        <span>How fast can I get funded?</span>
+                        <span class="faq-icon" style="font-size: 1.25rem; transition: transform 0.2s; color: #c8e86a;">+</span>
+                    </div>
+                    <div class="faq-answer" style="display: none; padding: 0 1.25rem 1.25rem 1.25rem; color: rgba(255,255,255,0.8); font-size: 0.875rem; line-height: 1.6;">
+                        Most applications approved within 24-72 hours, with funding within a week. Early Funding Received.
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Still Have Questions? Banner -->
+        <div style="text-align: center; margin-top: 3rem; padding: 1.5rem; background: rgba(255,255,255,0.1); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);"
+             onmouseover="this.style.background='rgba(255,255,255,0.15)';"
+             onmouseout="this.style.background='rgba(255,255,255,0.1)';">
+            <p style="color: white; margin-bottom: 0.5rem;">Still have questions? Can't find the answer you're looking for?</p>
+            <a href="#contact" style="color: #c8e86a; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem;">
+                Contact our support team
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.95); }
+    }
+    
+    .faq-item.open .faq-answer {
+        display: block !important;
+    }
+    
+    .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+    }
+</style>
 
     <!-- Recent News with Pictures -->
     <section style="padding: 5rem 0; background: #f5f7f5;">
@@ -694,5 +800,4 @@
         });
     </script>
 </body>
-
 </html>

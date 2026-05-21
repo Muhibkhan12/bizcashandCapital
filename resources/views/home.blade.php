@@ -576,92 +576,246 @@
         </div>
     </div>
 
-    <!-- Loan Services Section -->
-    <div class="w-full py-20 bg-gradient-to-br from-slate-50 to-slate-100 relative overflow-hidden" style="border-radius: 0;">
-        <div class="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[radial-gradient(circle_at_25%_40%,#10b981_1px,transparent_1px)] bg-[length:40px_40px]"></div>
-        <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-            <div class="text-center mb-[70px] scroll-reveal">
-                <div class="inline-flex items-center gap-2 bg-green-500/10 backdrop-blur-sm px-5 py-1.5 text-xs font-semibold text-green-600 mb-6 border border-green-500/20 hover:bg-green-500/20 transition-all duration-300" style="border-radius: 0;">
-                    <span class="inline-block w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                    Loan Solutions
-                </div>
-                <h2 class="font-grotesk text-[clamp(40px,6vw,52px)] font-bold tracking-tighter mb-5 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">All loan solutions</h2>
-                <p class="text-slate-500 max-w-[520px] mx-auto text-base">Choose the perfect financing option for your business needs</p>
+<!-- Why Choose Us - 4 Cards with Full Background Images -->
+<section style="padding: 6rem 0; background: linear-gradient(135deg, #f8faf8 0%, #f0f5f0 100%); position: relative; overflow: hidden;">
+    <!-- Decorative Background Elements -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; background-image: radial-gradient(circle at 25% 40%, #1a7a4a 2px, transparent 2px); background-size: 50px 50px;"></div>
+    <div style="position: absolute; top: -150px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(200,232,106,0.08) 0%, transparent 70%); border-radius: 50% !important;"></div>
+    <div style="position: absolute; bottom: -150px; left: -100px; width: 280px; height: 280px; background: radial-gradient(circle, rgba(26,122,74,0.06) 0%, transparent 70%); border-radius: 50% !important;"></div>
+    
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 2;">
+        
+        <!-- Section Header -->
+        <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+            <div style="display: inline-flex; align-items: center; gap: 0.75rem; background: linear-gradient(135deg, #1a7a4a10, #c8e86a10); backdrop-filter: blur(4px); padding: 0.5rem 1.5rem; margin-bottom: 1.5rem; border: 1px solid #1a7a4a20;">
+                <span style="width: 8px; height: 8px; background: #1a7a4a; display: inline-block;"></span>
+                <span style="font-size: 0.7rem; font-weight: 700; color: #1a7a4a; letter-spacing: 0.1em;">WHY TRUST US</span>
             </div>
-            <div class="grid md:grid-cols-3 gap-7 mb-7">
-                <div class="valorant-border overflow-hidden transition-all duration-500 cursor-pointer bg-white hover:-translate-y-2 hover:shadow-2xl scroll-reveal" style="border-radius: 0; transition-delay: 0.1s">
-                    <div class="relative h-[220px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=400&fit=crop" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 grayscale contrast-125">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-800/70 to-green-500/60"></div>
-                        <div class="absolute top-5 left-5">
-                            <div class="bg-white/20 backdrop-blur-md px-3.5 py-1.5 text-xs font-semibold text-white" style="border-radius: 0;">01</div>
-                        </div>
-                    </div>
-                    <div class="p-7">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">Business Loan</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-5">Expand & grow your business with flexible capital.</p>
-                        <div class="text-green-500 text-[13px] font-medium flex items-center gap-1.5 group cursor-pointer"><span class="group-hover:translate-x-1 transition-transform duration-300">Apply</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform duration-300">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg></div>
-                    </div>
+            <h2 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; background: linear-gradient(135deg, #1a7a4a, #0f5a38); -webkit-background-clip: text; background-clip: text; color: transparent; letter-spacing: -0.02em;">Your Reliable Partners<br>for Working Capital</h2>
+            <div style="width: 80px; height: 4px; background: linear-gradient(90deg, #1a7a4a, #c8e86a); margin: 1.5rem auto;"></div>
+            <p style="color: #5a6b5a; font-size: 1rem; line-height: 1.7; max-width: 600px; margin: 0 auto;">We understand the significance of having a steady and reliable source of working capital for your business.</p>
+        </div>
+        
+        <!-- 4 Cards in One Line - Full Background Images -->
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+            
+            <!-- Card 1 - Quick Funding (Full Background Image) -->
+            <div class="why-card" style="position: relative; min-height: 380px; overflow: hidden; transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1); cursor: pointer;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 40px -15px rgba(26,122,74,0.3)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                
+                <!-- Full Background Image -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+                    <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=500&h=600&fit=crop" 
+                         alt="Quick funding" 
+                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                    <!-- Dark Gradient Overlay -->
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.6), rgba(0,0,0,0.4));"></div>
                 </div>
-                <div class="valorant-border overflow-hidden transition-all duration-500 cursor-pointer bg-white hover:-translate-y-2 hover:shadow-2xl scroll-reveal" style="border-radius: 0; transition-delay: 0.2s">
-                    <div class="relative h-[220px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 grayscale contrast-125">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-800/70 to-green-500/60"></div>
-                        <div class="absolute top-5 left-5">
-                            <div class="bg-white/20 backdrop-blur-md px-3.5 py-1.5 text-xs font-semibold text-white" style="border-radius: 0;">02</div>
+                
+                <!-- Content -->
+                <div style="position: relative; z-index: 2; padding: 1.75rem; height: 100%; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                                    <div style="text-align: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                            </svg>
                         </div>
-                    </div>
-                    <div class="p-7">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">Commercial Loan</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-5">Real estate & equipment financing solutions.</p>
-                        <div class="text-green-500 text-[13px] font-medium flex items-center gap-1.5 group cursor-pointer"><span class="group-hover:translate-x-1 transition-transform duration-300">Apply</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform duration-300">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg></div>
-                    </div>
-                </div>
-                <div class="valorant-border overflow-hidden transition-all duration-500 cursor-pointer bg-white hover:-translate-y-2 hover:shadow-2xl scroll-reveal" style="border-radius: 0; transition-delay: 0.3s">
-                    <div class="relative h-[220px] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=400&fit=crop" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 grayscale contrast-125">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-800/70 to-green-500/60"></div>
-                        <div class="absolute top-5 left-5">
-                            <div class="bg-white/20 backdrop-blur-md px-3.5 py-1.5 text-xs font-semibold text-white" style="border-radius: 0;">03</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">Quick Funding</h3>
+                        <div style="width: 40px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem auto;"></div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; line-height: 1.6;">We guarantee fast funding thanks to our shortened approach. Get approved in days, not weeks.</p>
+                        <div style="margin-top: 1.25rem;">
+                            <span style="color: #c8e86a; font-size: 0.75rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                Learn More
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
                         </div>
-                    </div>
-                    <div class="p-7">
-                        <h3 class="text-2xl font-bold mb-3 text-slate-800">SBA Loan</h3>
-                        <p class="text-slate-500 text-sm leading-relaxed mb-5">Government-backed funding for small businesses.</p>
-                        <div class="text-green-500 text-[13px] font-medium flex items-center gap-1.5 group cursor-pointer"><span class="group-hover:translate-x-1 transition-transform duration-300">Apply</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:translate-x-1 transition-transform duration-300">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg></div>
-                    </div>
-                </div>
-            </div>
-            <div class="valorant-border overflow-hidden transition-all duration-500 cursor-pointer bg-white hover:-translate-y-2 hover:shadow-2xl mt-0 scroll-reveal" style="border-radius: 0; transition-delay: 0.4s">
-                <div class="grid md:grid-cols-[1fr,1.2fr] min-h-[280px]">
-                    <div class="relative overflow-hidden"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=500&fit=crop" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110 grayscale contrast-125">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-800/70 to-green-500/60"></div>
-                        <div class="absolute top-5 left-5">
-                            <div class="bg-green-500/90 backdrop-blur-md px-3.5 py-1.5 text-xs font-semibold text-white hover:bg-green-600 transition-colors duration-300" style="border-radius: 0;">Featured</div>
-                        </div>
-                    </div>
-                    <div class="p-10 bg-white">
-                        <div class="text-sm font-semibold text-green-500 mb-2">04</div>
-                        <h3 class="text-3xl font-bold mb-4 text-slate-800">Construction Loan</h3>
-                        <p class="text-slate-500 text-[15px] leading-relaxed mb-6">Build your vision with specialized construction financing.</p>
-                        <div class="flex gap-6 flex-wrap mb-7">
-                            <div><span class="font-bold text-slate-800">Interest Only</span><br><span class="text-xs text-slate-400">during construction</span></div>
-                        </div>
-                        <div class="inline-flex items-center gap-2 bg-slate-800 px-7 py-3 text-white font-semibold text-sm transition-all duration-300 hover:bg-green-600 hover:scale-105 group" style="border-radius: 0;"><span>Apply for Construction Loan</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" class="group-hover:translate-x-1 transition-transform duration-300">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg></div>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-12 scroll-reveal" style="transition-delay: 0.5s"><a href="#" class="border border-slate-300 hover:border-green-500 hover:bg-green-50 transition-all duration-300 px-9 py-3.5 text-sm font-semibold inline-block text-slate-800 hover:text-green-600 hover:scale-105" style="border-radius: 0;">View all loan options →</a></div>
+            
+            <!-- Card 2 - No Application Fee (Full Background Image) -->
+            <div class="why-card" style="position: relative; min-height: 380px; overflow: hidden; transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1); cursor: pointer;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 40px -15px rgba(26,122,74,0.3)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&h=600&fit=crop" 
+                         alt="No application fee" 
+                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.6), rgba(0,0,0,0.4));"></div>
+                </div>
+                
+                <div style="position: relative; z-index: 2; padding: 1.75rem; height: 100%; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div style="text-align: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">No Application Fee</h3>
+                        <div style="width: 40px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem auto;"></div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; line-height: 1.6;">Total transparency with zero unnecessary costs. Your money works for you from day one.</p>
+                        <div style="margin-top: 1.25rem;">
+                            <span style="color: #c8e86a; font-size: 0.75rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                Learn More
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 3 - Low-Interest Loans (Full Background Image) -->
+            <div class="why-card" style="position: relative; min-height: 380px; overflow: hidden; transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1); cursor: pointer;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 40px -15px rgba(26,122,74,0.3)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=500&h=600&fit=crop" 
+                         alt="Low interest rates" 
+                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.6), rgba(0,0,0,0.4));"></div>
+                </div>
+                
+                <div style="position: relative; z-index: 2; padding: 1.75rem; height: 100%; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div style="text-align: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 2v4M12 22v-4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83"/>
+                                <path d="M12 8v8M8 12h8"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">Low-Interest Loans</h3>
+                        <div style="width: 40px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem auto;"></div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; line-height: 1.6;">Flexible repayment terms designed for lasting financial freedom. Competitive rates for your success.</p>
+                        <div style="margin-top: 1.25rem;">
+                            <span style="color: #c8e86a; font-size: 0.75rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                Learn More
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 4 - Flexible Terms (Full Background Image) -->
+            <div class="why-card" style="position: relative; min-height: 380px; overflow: hidden; transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1); cursor: pointer;"
+                 onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 25px 40px -15px rgba(26,122,74,0.3)';"
+                 onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&h=600&fit=crop" 
+                         alt="Flexible terms" 
+                         style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;"
+                         onmouseover="this.style.transform='scale(1.05)'"
+                         onmouseout="this.style.transform='scale(1)'">
+                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.6), rgba(0,0,0,0.4));"></div>
+                </div>
+                
+                <div style="position: relative; z-index: 2; padding: 1.75rem; height: 100%; min-height: 380px; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div style="text-align: center;">
+                        <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem auto;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 8v4l3 3M12 2a10 10 0 1010 10"/>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.75rem;">Flexible Terms</h3>
+                        <div style="width: 40px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem auto;"></div>
+                        <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; line-height: 1.6;">Customizable repayment plans that work with your cash flow. We create the perfect loan structure.</p>
+                        <div style="margin-top: 1.25rem;">
+                            <span style="color: #c8e86a; font-size: 0.75rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.25rem;">
+                                Learn More
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Trust Indicators / Extra Badges -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e2ece2;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <span style="color: #4a5a4a; font-size: 0.875rem; font-weight: 500;">10,000+ Businesses Funded</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <span style="color: #4a5a4a; font-size: 0.875rem; font-weight: 500;">Fast Approval 24-72 hrs</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <span style="color: #4a5a4a; font-size: 0.875rem; font-weight: 500;">No Hidden Fees</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="2">
+                    <path d="M12 2a10 10 0 1010 10"/>
+                    <path d="M12 6v6l4 2"/>
+                </svg>
+                <span style="color: #4a5a4a; font-size: 0.875rem; font-weight: 500;">Flexible Repayment</span>
+            </div>
         </div>
     </div>
+</div>
+
+<style>
+    @media (max-width: 1024px) {
+        .why-card {
+            min-height: 350px !important;
+        }
+        .why-card h3 {
+            font-size: 1.2rem !important;
+        }
+        .why-card p {
+            font-size: 0.8rem !important;
+        }
+        .why-card svg {
+            width: 28px !important;
+            height: 28px !important;
+        }
+        .why-card > div > div:first-child {
+            width: 60px !important;
+            height: 60px !important;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        div[style*="grid-template-columns: repeat(4, 1fr)"] {
+            grid-template-columns: repeat(2, 1fr) !important;
+        }
+    }
+    
+    @media (max-width: 500px) {
+        div[style*="grid-template-columns: repeat(4, 1fr)"] {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
 
     <!-- Why Us Section - Redesigned Premium Layout -->
     <div class="w-full py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden" style="border-radius: 0;">
