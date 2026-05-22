@@ -449,79 +449,105 @@
         </div>
     </section>
 
-    <!-- LOAN SERVICES - With Industry-Relevant Images -->
-    <section id="services" style="padding: 5rem 0; background: white;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <div class="tag" style="display: inline-flex; margin-bottom: 1rem;"><span></span>04 · Loan Solutions</div>
-                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">All loan solutions</h2>
-                <p style="color: #6b7280;">Choose the perfect financing option for your business needs</p>
+<!-- LOAN SERVICES - With Industry-Relevant Images -->
+<section id="services" style="padding: 5rem 0; background: white;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <div class="tag" style="display: inline-flex; margin-bottom: 1rem;"><span></span>04 · Loan Solutions</div>
+            <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">All loan solutions</h2>
+            <p style="color: #6b7280;">Choose the perfect financing option for your business needs</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+
+            <!-- Business Loan Card -->
+            <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
+                <div style="position: absolute; inset: 0;">
+                    <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=500&fit=crop" alt="Business loan - modern office" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
+                </div>
+                <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">01</span></div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Business Loan</h3>
+                        <p style="font-size: 0.875rem; opacity: 0.9;">Expand & grow your business with flexible capital solutions.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">$10K – $500K</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
+                    </div>
+                </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-
-                <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
-                    <div style="position: absolute; inset: 0;">
-                        <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=500&fit=crop" alt="Business loan - modern office" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
-                    </div>
-                    <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
-                        <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">01</span></div>
-                        <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Business Loan</h3>
-                            <p style="font-size: 0.875rem; opacity: 0.9;">Expand & grow your business with flexible capital solutions.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">$10K – $500K</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
-                        </div>
+            <!-- Commercial Loan Card -->
+            <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
+                <div style="position: absolute; inset: 0;">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=500&fit=crop" alt="Commercial loan - real estate building" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
+                </div>
+                <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">02</span></div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Commercial Loan</h3>
+                        <p style="font-size: 0.875rem; opacity: 0.9;">Real estate & equipment financing for your commercial property.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Up to $5M</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
-                    <div style="position: absolute; inset: 0;">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=500&fit=crop" alt="Commercial loan - real estate building" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
-                    </div>
-                    <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
-                        <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">02</span></div>
-                        <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Commercial Loan</h3>
-                            <p style="font-size: 0.875rem; opacity: 0.9;">Real estate & equipment financing for your commercial property.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Up to $5M</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
-                        </div>
+            <!-- SBA Loan Card -->
+            <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
+                <div style="position: absolute; inset: 0;">
+                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop" alt="SBA loan - government backed financing" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
+                </div>
+                <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">03</span></div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">SBA Loan</h3>
+                        <p style="font-size: 0.875rem; opacity: 0.9;">Government-backed funding for small businesses with competitive rates.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Low Rates</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
-                    <div style="position: absolute; inset: 0;">
-                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop" alt="SBA loan - government backed financing" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
-                    </div>
-                    <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
-                        <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">03</span></div>
-                        <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">SBA Loan</h3>
-                            <p style="font-size: 0.875rem; opacity: 0.9;">Government-backed funding for small businesses with competitive rates.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Low Rates</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
-                        </div>
+            <!-- Construction Loan Card -->
+            <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
+                <div style="position: absolute; inset: 0;">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=500&fit=crop" alt="Construction loan - building site" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
+                </div>
+                <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">04</span></div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Construction Loan</h3>
+                        <p style="font-size: 0.875rem; opacity: 0.9;">Build your vision with specialized construction financing.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Interest Only</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
                     </div>
                 </div>
+            </div>
 
-                <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
-                    <div style="position: absolute; inset: 0;">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=500&fit=crop" alt="Construction loan - building site" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
-                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
-                    </div>
-                    <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
-                        <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">04</span></div>
-                        <div>
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Construction Loan</h3>
-                            <p style="font-size: 0.875rem; opacity: 0.9;">Build your vision with specialized construction financing.</p>
-                            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Interest Only</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
-                        </div>
+            <!-- Bridge Loan Card - NEW -->
+            <div class="group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl" style="height: 400px;">
+                <div style="position: absolute; inset: 0;">
+                    <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=500&fit=crop" alt="Bridge loan - connecting financial gaps" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s;" class="group-hover:scale-110">
+                    <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.5), rgba(0,0,0,0.2));"></div>
+                </div>
+                <div style="position: relative; padding: 1.5rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; color: white;">
+                    <div><span style="background: #1a7a4a; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: bold;">05</span></div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Bridge Loan</h3>
+                        <p style="font-size: 0.875rem; opacity: 0.9;">Temporary financing to bridge financial gaps during transitions.</p>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 0.75rem;"><span style="color: #c8e86a; font-size: 0.75rem;">Fast Funding</span><a href="#" style="color: #c8e86a; text-decoration: none; font-size: 0.875rem; font-weight: 600;">Apply →</a></div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="#" style="border: 2px solid #1a7a4a; color: #1a7a4a; padding: 0.75rem 2rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; transition: all 0.3s;" 
+               onmouseover="this.style.background='#1a7a4a'; this.style.color='white';"
+               onmouseout="this.style.background='transparent'; this.style.color='#1a7a4a';">View all loan options →</a>
+        </div>
+    </div>
+</section>
 
     <!-- FAQs - With Background Video -->
     <section style="padding: 5rem 0; position: relative; overflow: hidden;">

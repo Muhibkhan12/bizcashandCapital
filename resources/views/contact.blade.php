@@ -547,42 +547,8 @@
 
     @include('application')
 
-    <!-- Footer -->
-    <footer style="background: #111811; color: #9ca3af; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                        <div style="width: 32px; height: 32px; background: #1a7a4a;"></div>
-                        <span style="font-weight: 700; color: white;">BizCash&Capital</span>
-                    </div>
-                    <p style="font-size: 0.875rem;">Your trusted partner for unlocking the financial resources your business needs to thrive.</p>
-                </div>
-                <div>
-                    <h4 style="font-weight: 700; color: white; margin-bottom: 1rem;">Quick Links</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none;">About Us</a></li>
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none;">Loan Services</a></li>
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none;">FAQs</a></li>
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none;">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-weight: 700; color: white; margin-bottom: 1rem;">Legal</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none;">Privacy Policy</a></li>
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none;">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-weight: 700; color: white; margin-bottom: 1rem;">Contact</h4>
-                    <p style="font-size: 0.875rem;">📞 <a href="tel:+12166470007" style="color: #9ca3af; text-decoration: none;">+1 (216) 647-0007</a></p>
-                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✉️ <a href="mailto:info@bizcashandcapital.com" style="color: #9ca3af; text-decoration: none;">info@bizcashandcapital.com</a></p>
-                </div>
-            </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; text-align: center; font-size: 0.75rem;">© All Copyright 2025 by BizCashandCapital.com</div>
-        </div>
-    </footer>
+
+    @include('footer')
 
     <style>
         .faq-item.open .faq-answer {

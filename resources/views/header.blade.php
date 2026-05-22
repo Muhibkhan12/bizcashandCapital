@@ -2,7 +2,10 @@
 <div id="biz-navbar" class="biz-navbar-fixed w-full fixed top-0 z-50 transition-all duration-500 ease-in-out">
     <div class="biz-navbar-container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div class="biz-navbar-flex flex justify-between items-center py-3 md:py-4">
-            <div class="biz-logo font-grotesk font-bold text-xl md:text-2xl tracking-tight text-white hover:scale-105 transition-transform duration-300">BizCash&Capital</div>
+            <!-- Logo as Image instead of Text -->
+            <a href="/" class="biz-logo-link">
+                <img src="{{ asset('images/logo-1.png')}}" alt="BizCash&Capital Logo" class="biz-logo-img h-8 md:h-10 w-auto hover:scale-105 transition-transform duration-300">
+            </a>
             
             <!-- Desktop Navigation Links -->
             <div class="biz-desktop-nav hidden lg:flex items-center gap-6 xl:gap-8">
@@ -16,14 +19,14 @@
                     </span>
                     <div class="biz-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white shadow-xl z-50">
                         <div class="py-2">
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Auto Repair</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Attorney</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Cleaning Business</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Construction</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Convenience Store</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Daycare</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Beauty Salon</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Accounting</a>
+                            <a href="{{ url('/auto-repair-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Auto Repair</a>
+                            <a href="{{ url('/attorney-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Attorney</a>
+                            <a href="{{ url('/cleaning-business')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Cleaning Business</a>
+                            <a href="{{ url('/construction-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Construction</a>
+                            <a href="{{ url('/convenience-store')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Convenience Store</a>
+                            <a href="{{ url('/day-care-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Daycare</a>
+                            <a href="{{ url('/beauty-saloon-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Beauty Salon</a>
+                            <a href="{{ url('/accounting-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Accounting</a>
                         </div>
                     </div>
                 </div>
@@ -38,17 +41,17 @@
                     </span>
                     <div class="biz-dropdown-menu absolute top-full left-0 mt-2 w-56 bg-white shadow-xl z-50">
                         <div class="py-2">
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">SBA Loan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Business Loan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Commercial Loan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Construction Loan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Bridge Loan</a>
+                            <a href="{{url('/sba-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">SBA Loan</a>
+                            <a href="{{url('/business-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Business Loan</a>
+                            <a href="{{url('/commercial-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Commercial Loan</a>
+                            <a href="{{url('/contstruction-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Construction Loan</a>
+                            <a href="{{url('/bridge-loan')}}" class="block px-4 py-2 text-sm text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 transition-colors duration-200">Bridge Loan</a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Contact Us Link -->
-                <a href="#contact" class="biz-contact-link text-white/80 hover:text-white text-sm font-medium transition-all duration-300 px-2 py-1">Contact Us</a>
+                <a href="{{ url('/contact')}}" class="biz-contact-link text-white/80 hover:text-white text-sm font-medium transition-all duration-300 px-2 py-1">Contact Us</a>
             </div>
             
             <!-- Mobile Menu Button (Hamburger) -->
@@ -109,7 +112,7 @@
 
 <style>
     /* ============================================
-       BIZCASH NAVBAR - DROPDOWNS WORKING FIXED
+       BIZCASH NAVBAR - WITH IMAGE LOGO
     ============================================ */
     
     .biz-navbar-fixed {
@@ -147,18 +150,20 @@
         padding-bottom: 0.75rem;
     }
     
-    .biz-logo {
-        font-family: 'Space Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
-        font-weight: 700;
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-        letter-spacing: -0.025em;
-        color: #ffffff;
-        transition: transform 0.3s ease, color 0.3s ease;
-        cursor: default;
+    /* Logo Image Styles */
+    .biz-logo-link {
+        display: inline-block;
+        line-height: 0;
     }
     
-    .biz-logo:hover {
+    .biz-logo-img {
+        height: 40px;
+        width: auto;
+        transition: transform 0.3s ease;
+        object-fit: contain;
+    }
+    
+    .biz-logo-img:hover {
         transform: scale(1.05);
     }
     
@@ -246,10 +251,6 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
     
-    .biz-navbar-fixed.biz-navbar-scrolled .biz-logo {
-        color: #0f172a;
-    }
-    
     .biz-navbar-fixed.biz-navbar-scrolled .biz-pill {
         background: #f1f5f9;
         color: #334155;
@@ -288,9 +289,8 @@
             padding-bottom: 1rem;
         }
         
-        .biz-logo {
-            font-size: 1.5rem;
-            line-height: 2rem;
+        .biz-logo-img {
+            height: 45px;
         }
     }
     
@@ -306,6 +306,10 @@
         
         .biz-mobile-menu {
             display: none !important;
+        }
+        
+        .biz-logo-img {
+            height: 50px;
         }
     }
     

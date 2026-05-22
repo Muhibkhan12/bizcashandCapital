@@ -8,27 +8,60 @@ Route::get('/', function () {
 Route::get('/check', function () {
     return view('checking');
 });
+
+Route::get('/home2',function(){
+    return view('home2');
+});
+
+
+Route::get('/contact',function(){
+    return view('contact');
+})->name('contact-page');
+
+
+Route::get('/loans',function(){
+    return view('loans');
+});
+Route::get('/sba-loan',function(){
+    return view('loans.sba-loan');
+})->name('sba-loan');
 Route::get('/commercial-loan', function () {
     return view('loans.commercial-loan');
 });
 Route::get('/business-loan', function () {
     return view('loans.business-loan');
 });
-Route::get('/check2', function () {
-    return view('check2');
+Route::get('/bridge-loan', function () {
+    return view('loans.bridge-loan');
 });
+Route::get('/contstruction-loan', function () {
+    return view('loans.contstruction-loan');
+});
+
 Route::get('/industries',function(){
-    return view('industries');
+return view('industries');
 });
-Route::get('/home2',function(){
-    return view('home2');
+Route::get('/auto-repair-loan', function(){
+    return view('industries.auto-repair');
 });
-Route::get('/loans',function(){
-    return view('loans');
+Route::get('/accounting-loan', function(){
+    return view('industries.accounting');
 });
-Route::get('/contact',function(){
-    return view('contact');
-})->name('contact-page');
-Route::get('/sba-loan',function(){
-    return view('loans.sba-loan');
-})->name('sba-loan');
+Route::get('/attorney-loan', function(){
+    return view('industries.attorney-loan');
+});
+Route::get('/beauty-saloon-loan', function(){
+    return view('industries.beauty-saloon');
+});
+Route::get('/cleaning-business', function(){
+    return view('industries.cleaningbusiness-loans');
+});
+Route::get('/construction-loan', function(){
+    return view('industries.construction-loan');
+});
+Route::get('/convenience-store', function(){
+    return view('industries.convenience-store-loan');
+});
+Route::get('/day-care-loan', function(){
+    return view('industries.day-care');
+});
