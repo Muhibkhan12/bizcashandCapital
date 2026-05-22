@@ -152,7 +152,7 @@
     <!-- Hero Section -->
     <section class="relative h-[70vh] min-h-[450px] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a5b5?w=1600&q=80" alt="Beauty salon interior" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80" alt="Beauty salon interior" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-emerald-900/60 z-10"></div>
         </div>
         <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full text-center">
