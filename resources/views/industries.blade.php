@@ -766,6 +766,8 @@
     </div>
 </section>
 
+
+
 <style>
     /* For browsers that don't support line-clamp, add fallback */
     .line-clamp-2 {
@@ -776,138 +778,6 @@
         text-overflow: ellipsis;
     }
 </style>
-<!-- LOAN SERVICES - FULL CARD BACKGROUND IMAGES WITH TEXT OVERLAY -->
-<section id="services" class="py-24 px-6 bg-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16 sr">
-            <div class="tag mb-5"><span></span>04 · Loan Solutions</div>
-            <h2 class="font-jakarta text-4xl md:text-5xl font-extrabold tracking-tight text-slate-800 mb-4">All loan solutions</h2>
-            <p class="text-slate-500 max-w-xl mx-auto text-[15px]">Choose the perfect financing option for your business needs</p>
-        </div>
-
-        <!-- 4 Cards in 1 Row - Full Image Background -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-
-            <!-- Card 1 - Business Loan (Full Image Background) -->
-            <div class="group relative rounded-none overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sr h-[400px]">
-                <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?w=600&h=500&fit=crop" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20"></div>
-                </div>
-                <div class="relative z-10 p-6 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block bg-emerald-500 text-white text-xs font-bold px-3 py-1.5">01</div>
-                    </div>
-                    <div>
-                        <h3 class="font-jakarta font-bold text-white text-2xl mb-2">Business Loan</h3>
-                        <p class="text-white/80 text-sm leading-relaxed mb-4">Expand & grow your business with flexible capital solutions tailored to your needs.</p>
-                        <div class="flex items-center justify-between pt-3 border-t border-white/20">
-                            <span class="text-lime-300 text-xs font-semibold">$10K – $500K</span>
-                            <a href="#contact" class="inline-flex items-center gap-1.5 text-lime-300 text-sm font-semibold group-hover:gap-2 transition-all duration-300 hover:text-white">
-                                Apply
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 - Commercial Loan (Full Image Background) -->
-            <div class="group relative rounded-none overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sr h-[400px]">
-                <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=500&fit=crop" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20"></div>
-                </div>
-                <div class="relative z-10 p-6 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block bg-emerald-500 text-white text-xs font-bold px-3 py-1.5">02</div>
-                    </div>
-                    <div>
-                        <h3 class="font-jakarta font-bold text-white text-2xl mb-2">Commercial Loan</h3>
-                        <p class="text-white/80 text-sm leading-relaxed mb-4">Real estate & equipment financing for your commercial property and assets.</p>
-                        <div class="flex items-center justify-between pt-3 border-t border-white/20">
-                            <span class="text-lime-300 text-xs font-semibold">Up to $5M</span>
-                            <a href="#contact" class="inline-flex items-center gap-1.5 text-lime-300 text-sm font-semibold group-hover:gap-2 transition-all duration-300 hover:text-white">
-                                Apply
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 - SBA Loan (Full Image Background) -->
-            <div class="group relative rounded-none overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sr h-[400px]">
-                <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20"></div>
-                </div>
-                <div class="relative z-10 p-6 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block bg-emerald-500 text-white text-xs font-bold px-3 py-1.5">03</div>
-                    </div>
-                    <div>
-                        <h3 class="font-jakarta font-bold text-white text-2xl mb-2">SBA Loan</h3>
-                        <p class="text-white/80 text-sm leading-relaxed mb-4">Government-backed funding for small businesses with competitive rates.</p>
-                        <div class="flex items-center justify-between pt-3 border-t border-white/20">
-                            <span class="text-lime-300 text-xs font-semibold">Low Rates</span>
-                            <a href="#contact" class="inline-flex items-center gap-1.5 text-lime-300 text-sm font-semibold group-hover:gap-2 transition-all duration-300 hover:text-white">
-                                Apply
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 - Construction Loan (Full Image Background) -->
-            <div class="group relative rounded-none overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl sr h-[400px]">
-                <div class="absolute inset-0 z-0">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=500&fit=crop" 
-                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/50 to-black/20"></div>
-                </div>
-                <div class="relative z-10 p-6 h-full flex flex-col justify-between">
-                    <div>
-                        <div class="inline-block bg-emerald-500 text-white text-xs font-bold px-3 py-1.5">04</div>
-                    </div>
-                    <div>
-                        <h3 class="font-jakarta font-bold text-white text-2xl mb-2">Construction Loan</h3>
-                        <p class="text-white/80 text-sm leading-relaxed mb-4">Build your vision with specialized construction financing and interest-only payments.</p>
-                        <div class="flex items-center justify-between pt-3 border-t border-white/20">
-                            <span class="text-lime-300 text-xs font-semibold">Interest Only</span>
-                            <a href="#contact" class="inline-flex items-center gap-1.5 text-lime-300 text-sm font-semibold group-hover:gap-2 transition-all duration-300 hover:text-white">
-                                Apply
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-x-1 transition-transform">
-                                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- View All Button -->
-        <div class="text-center mt-10 sr">
-            <a href="#contact" class="inline-flex items-center gap-2 border-2 border-emerald-600 text-emerald-600 px-8 py-3.5 font-semibold text-sm transition-all duration-300 hover:bg-emerald-600 hover:text-white group">
-                <span>View all loan options</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="group-hover:translate-x-1 transition-transform">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
 
     <!-- JOURNEY SECTION -->
     <section class="relative py-24 px-6 overflow-hidden">
@@ -934,88 +804,6 @@
             </div>
         </div>
     </section>
-
-    <!-- LOAN CALCULATOR -->
-    <section class="py-24 px-6 bg-slate-50 relative overflow-hidden lime-pattern">
-        <div class="max-w-5xl mx-auto relative z-10">
-            <div class="text-center mb-12 sr">
-                <div class="tag mb-5"><span></span>06 · Loan Calculator</div>
-                <h2 class="font-jakarta text-4xl md:text-5xl font-extrabold tracking-tight text-slate-800 mb-4">How much do you need?</h2>
-                <p class="text-slate-500 text-[15px]">Use the sliders to estimate your monthly payments</p>
-            </div>
-            <div class="border border-slate-200 bg-white overflow-hidden shadow-xl sr-s">
-                <div class="grid md:grid-cols-2">
-                    <div class="p-8 md:p-10 bg-gradient-to-br from-slate-50 to-white">
-                        <div class="space-y-6">
-                            <div>
-                                <div class="flex justify-between text-sm mb-3"><span class="text-slate-600 font-medium">Loan Amount</span><span class="text-emerald-600 font-bold font-jakarta" id="amountVal">$25,000</span></div><input type="range" id="loanAmountSlider" min="1000" max="500000" step="1000" value="25000" class="w-full h-1.5 bg-slate-200 accent-emerald-500">
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm mb-3"><span class="text-slate-600 font-medium">Duration (months)</span><span class="text-emerald-600 font-bold font-jakarta" id="durationVal">24 months</span></div><input type="range" id="durationSlider" min="6" max="60" step="1" value="24" class="w-full h-1.5 bg-slate-200 accent-emerald-500">
-                            </div>
-                            <div>
-                                <div class="flex justify-between text-sm mb-3"><span class="text-slate-600 font-medium">Interest Rate</span><span class="text-emerald-600 font-bold font-jakarta" id="rateVal">6.9%</span></div><input type="range" id="rateSlider" min="4.9" max="24.9" step="0.1" value="6.9" class="w-full h-1.5 bg-slate-200 accent-emerald-500">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-8 md:p-10 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white">
-                        <p class="text-emerald-100 text-sm mb-2 uppercase tracking-widest font-semibold">Monthly Payment</p>
-                        <p class="font-jakarta text-5xl md:text-6xl font-extrabold mb-8" id="monthlyResult">$1,134</p>
-                        <div class="grid grid-cols-2 gap-3 mb-8">
-                            <div class="bg-white/10 p-4 border border-white/10">
-                                <p class="text-emerald-200 text-xs mb-1">Total Interest</p>
-                                <p class="font-jakarta font-bold text-lg" id="totalInterest">$2,216</p>
-                            </div>
-                            <div class="bg-white/10 p-4 border border-white/10">
-                                <p class="text-emerald-200 text-xs mb-1">Total Payment</p>
-                                <p class="font-jakarta font-bold text-lg" id="totalPayment">$27,216</p>
-                            </div>
-                        </div><a href="#contact" class="block w-full text-center bg-white text-emerald-700 py-3.5 font-bold text-sm hover:bg-emerald-50 transition mb-3">Apply Now →</a>
-                        <p class="text-center text-emerald-200 text-xs">No credit check for pre-qualification</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-@include('application')
-
-    <footer class="bg-slate-900 text-white pt-16 pb-8 px-6 border-t border-white/5">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-5 gap-8 mb-12">
-                <div class="lg:col-span-2">
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center"><span class="text-white font-bold text-sm font-jakarta">B</span></div><span class="font-jakarta font-bold text-lg">BizCash&Capital</span>
-                    </div>
-                    <p class="text-slate-400 text-sm mb-5">Your trusted partner for unlocking the financial resources your business needs to thrive and grow.</p>
-                </div>
-                <div>
-                    <h4 class="font-jakarta font-bold mb-4 text-sm uppercase">Links</h4>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li><a href="#about" class="hover:text-emerald-400 transition">About Us</a></li>
-                        <li><a href="#services" class="hover:text-emerald-400 transition">Loan Services</a></li>
-                        <li><a href="#industries" class="hover:text-emerald-400 transition">Industries</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-jakarta font-bold mb-4 text-sm uppercase">Legal</h4>
-                    <ul class="space-y-2 text-slate-400 text-sm">
-                        <li><a href="#" class="hover:text-emerald-400 transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-emerald-400 transition">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-jakarta font-bold mb-4 text-sm uppercase">Open Hours</h4>
-                    <p class="text-slate-400 text-sm">Mon – Sat: 8am – 6pm<br>Sunday: Closed</p>
-                    <div class="mt-4">
-                        <p class="text-slate-400 text-sm">📞 <a href="tel:+12166470007" class="hover:text-emerald-400">+1 (216) 647-0007</a></p>
-                        <p class="text-slate-400 text-sm">✉️ <a href="mailto:info@bizcashandcapital.com" class="hover:text-emerald-400">info@bizcashandcapital.com</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-slate-800 pt-8 text-center text-slate-500 text-sm">© All Copyright 2025 by BizCashandCapital.com</div>
-        </div>
-    </footer>
 
     <script>
         const navbar = document.getElementById('navbar');
@@ -1095,6 +883,8 @@
             }, 1200);
         }
     </script>
+
+    @include('footer')
 </body>
 
 </html>
