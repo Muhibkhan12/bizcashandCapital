@@ -35,7 +35,7 @@ Route::get('/bridge-loan', function () {
     return view('loans.bridge-loan');
 });
 Route::get('/contstruction-loan', function () {
-    return view('loans.contstruction-loan');
+    return view('loans.construction-loan');
 });
 
 Route::get('/industries',function(){
@@ -64,4 +64,9 @@ Route::get('/convenience-store', function(){
 });
 Route::get('/day-care-loan', function(){
     return view('industries.day-care');
+});
+
+
+Route::get('/check2',function(){
+    return view('check2');
 });

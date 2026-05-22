@@ -157,7 +157,7 @@
         </div>
         <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full text-center">
             <div class="inline-flex items-center justify-center mb-6"></div>
-            <h1 class="font-jakarta text-[clamp(48px,7vw,90px)] leading-[1.1] tracking-tight text-white mb-4">Beauty Salon Funding</h1>
+            <h1 class="font-jakarta text-[clamp(48px,7vw,90px)] leading-[1.1] tracking-tight text-white mb-4">Beauty Saloon Funding</h1>
             <div class="w-24 h-1 bg-gradient-to-r from-lime-400 to-emerald-500 mx-auto mb-6"></div>
             <p class="text-white/80 text-base max-w-3xl mx-auto leading-relaxed">
                 At BizCashAndCapital, we understand that beauty salons are not just places for beauty treatments, they are spaces where individuals enhance their confidence and express their unique style. To support the beauty industry's growth, we specialize in advising tailored financing solutions for beauty salon owners. Our mission is to ensure that every beauty salon has the financial foundation required to bring their glamorous vision to life.

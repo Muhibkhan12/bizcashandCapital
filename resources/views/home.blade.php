@@ -942,149 +942,200 @@
             </div>
         </div>
 
-        <!-- FAQs Section -->
-        <div class="w-full py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden" style="border-radius: 0;">
-            <div class="absolute top-0 left-0 w-full h-full opacity-[0.04] pointer-events-none bg-[radial-gradient(circle_at_25%_40%,#10b981_1px,transparent_1px)] bg-[length:40px_40px]"></div>
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-500/5 blur-3xl"></div>
+<!-- FAQs Section -->
+<div class="w-full py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden" style="border-radius: 0;">
+    <div class="absolute top-0 left-0 w-full h-full opacity-[0.04] pointer-events-none bg-[radial-gradient(circle_at_25%_40%,#10b981_1px,transparent_1px)] bg-[length:40px_40px]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-500/5 blur-3xl"></div>
 
-            <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
-                <div class="text-center mb-14 scroll-reveal">
-                    <div class="inline-flex items-center gap-2 bg-green-100 px-4 py-2 text-xs font-semibold text-green-700 mb-5 shadow-sm" style="border-radius: 0;">
-                        <span class="inline-block w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
-                        Frequently Asked Questions
-                    </div>
-                    <h2 class="font-grotesk text-4xl md:text-5xl font-bold tracking-tight text-slate-800 mb-4">
-                        Got questions? <span class="text-green-600">We've got answers</span>
-                    </h2>
-                    <p class="text-slate-500 max-w-2xl mx-auto text-base leading-relaxed">Everything you need to know about BizCashAndCapital and how we help your business thrive.</p>
-                </div>
+    <div class="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+        <div class="text-center mb-14 scroll-reveal">
+            <div class="inline-flex items-center gap-2 bg-green-100 px-4 py-2 text-xs font-semibold text-green-700 mb-5 shadow-sm" style="border-radius: 0;">
+                <span class="inline-block w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
+                Frequently Asked Questions
+            </div>
+            <h2 class="font-grotesk text-4xl md:text-5xl font-bold tracking-tight text-slate-800 mb-4">
+                Got questions? <span class="text-green-600">We've got answers</span>
+            </h2>
+            <p class="text-slate-500 max-w-2xl mx-auto text-base leading-relaxed">Everything you need to know about BizCashAndCapital and how we help your business thrive.</p>
+        </div>
 
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <div class="scroll-reveal-left">
-                        <div class="bg-gradient-to-br from-green-600 to-emerald-700 p-8 text-white shadow-xl" style="border-radius: 0;">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 -mr-16 -mt-16"></div>
-                            <div class="relative z-10">
-                                <div class="w-14 h-14 bg-white/20 flex items-center justify-center mb-6 backdrop-blur-sm" style="border-radius: 0;">
-                                    <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+            <div class="scroll-reveal-left">
+                <div class="bg-gradient-to-br from-green-600 to-emerald-700 p-8 text-white shadow-xl relative overflow-hidden" style="border-radius: 0;">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/5 -mr-16 -mt-16"></div>
+                    <div class="relative z-10">
+                        <div class="w-14 h-14 bg-white/20 flex items-center justify-center mb-6 backdrop-blur-sm" style="border-radius: 0;">
+                            <svg class="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Still have questions?</h3>
+                        <p class="text-green-100 text-sm mb-6 leading-relaxed">Can't find the answer you're looking for? Please chat to our friendly team.</p>
+                        <div class="space-y-4">
+                            <a href="tel:+12166470007" class="flex items-center gap-3 text-white hover:bg-white/10 p-3 transition-all duration-300 group" style="border-radius: 0;">
+                                <div class="w-10 h-10 bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition" style="border-radius: 0;">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                                     </svg>
                                 </div>
-                                <h3 class="text-2xl font-bold mb-3">Still have questions?</h3>
-                                <p class="text-green-100 text-sm mb-6 leading-relaxed">Can't find the answer you're looking for? Please chat to our friendly team.</p>
-                                <div class="space-y-4">
-                                    <a href="tel:+12166470007" class="flex items-center gap-3 text-white hover:bg-white/10 p-3 transition-all duration-300 group" style="border-radius: 0;">
-                                        <div class="w-10 h-10 bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition" style="border-radius: 0;"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                            </svg></div>
-                                        <div>
-                                            <p class="text-xs text-green-200">Call us</p>
-                                            <p class="font-medium">+1 (216) 647-0007</p>
-                                        </div>
-                                    </a>
-                                    <a href="mailto:info@bizcashandcapital.com" class="flex items-center gap-3 text-white hover:bg-white/10 p-3 transition-all duration-300 group" style="border-radius: 0;">
-                                        <div class="w-10 h-10 bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition" style="border-radius: 0;"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                                <polyline points="22,6 12,13 2,6" />
-                                            </svg></div>
-                                        <div>
-                                            <p class="text-xs text-green-200">Email us</p>
-                                            <p class="font-medium">info@bizcashandcapital.com</p>
-                                        </div>
-                                    </a>
-                                    <div class="flex items-center gap-3 text-white hover:bg-white/10 p-3 transition-all duration-300 group" style="border-radius: 0;">
-                                        <div class="w-10 h-10 bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition" style="border-radius: 0;"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <circle cx="12" cy="12" r="10" />
-                                                <path d="M12 6v6l4 2" />
-                                            </svg></div>
-                                        <div>
-                                            <p class="text-xs text-green-200">Business hours</p>
-                                            <p class="font-medium">Mon-Sat, 8am - 6pm</p>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <p class="text-xs text-green-200">Call us</p>
+                                    <p class="font-medium">+1 (216) 647-0007</p>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="scroll-reveal-right">
-                        <div class="space-y-3">
-                            <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;" onclick="toggleFaq(this)">
-                                <div class="flex justify-between items-center p-6">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
-                                        <span class="text-lg font-semibold text-slate-800">What is BizCashAndCapital?</span>
-                                    </div>
-                                    <div class="w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500 faq-toggle" style="border-radius: 0;">+</div>
+                            </a>
+                            <a href="mailto:info@bizcashandcapital.com" class="flex items-center gap-3 text-white hover:bg-white/10 p-3 transition-all duration-300 group" style="border-radius: 0;">
+                                <div class="w-10 h-10 bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition" style="border-radius: 0;">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                        <polyline points="22,6 12,13 2,6" />
+                                    </svg>
                                 </div>
-                                <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
-                                    <div class="border-t border-slate-100 pt-4">
-                                        <div class="flex gap-3">
-                                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
-                                            <p>We're a leading provider of business loans, specializing in low-credit solutions and fast funding.</p>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <p class="text-xs text-green-200">Email us</p>
+                                    <p class="font-medium">info@bizcashandcapital.com</p>
                                 </div>
-                            </div>
-                            <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;" onclick="toggleFaq(this)">
-                                <div class="flex justify-between items-center p-6">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
-                                        <span class="text-lg font-semibold text-slate-800">How does BizCashAndCapital work?</span>
-                                    </div>
-                                    <div class="w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500 faq-toggle" style="border-radius: 0;">+</div>
+                            </a>
+                            <div class="flex items-center gap-3 text-white hover:bg-white/10 p-3 transition-all duration-300 group" style="border-radius: 0;">
+                                <div class="w-10 h-10 bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition" style="border-radius: 0;">
+                                    <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 6v6l4 2" />
+                                    </svg>
                                 </div>
-                                <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
-                                    <div class="border-t border-slate-100 pt-4">
-                                        <div class="flex gap-3">
-                                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
-                                            <p>Streamlined online application, holistic review, and funding within days.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;" onclick="toggleFaq(this)">
-                                <div class="flex justify-between items-center p-6">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
-                                        <span class="text-lg font-semibold text-slate-800">No worries about a bad credit score?</span>
-                                    </div>
-                                    <div class="w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500 faq-toggle" style="border-radius: 0;">+</div>
-                                </div>
-                                <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
-                                    <div class="border-t border-slate-100 pt-4">
-                                        <div class="flex gap-3">
-                                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
-                                            <p>Correct! We specialize in loans for businesses with low credit scores.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;" onclick="toggleFaq(this)">
-                                <div class="flex justify-between items-center p-6">
-                                    <div class="flex items-center gap-4">
-                                        <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
-                                        <span class="text-lg font-semibold text-slate-800">What are the criteria for loan application?</span>
-                                    </div>
-                                    <div class="w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500 faq-toggle" style="border-radius: 0;">+</div>
-                                </div>
-                                <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
-                                    <div class="border-t border-slate-100 pt-4">
-                                        <div class="flex gap-3">
-                                            <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
-                                            <p>Minimum 6 months in business. Simple documentation required.</p>
-                                        </div>
-                                    </div>
+                                <div>
+                                    <p class="text-xs text-green-200">Business hours</p>
+                                    <p class="font-medium">Mon-Sat, 8am - 6pm</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="text-center mt-12 scroll-reveal">
-                    <p class="text-slate-500 text-sm">Still have questions? <a href="#" class="text-green-600 font-medium hover:underline">Contact our support team</a> for personalized assistance.</p>
+            <div class="scroll-reveal-right">
+                <div class="space-y-3">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;">
+                        <div class="flex justify-between items-center p-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
+                                <span class="text-lg font-semibold text-slate-800">What is BizCashAndCapital?</span>
+                            </div>
+                            <div class="faq-toggle w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500" style="border-radius: 0;">+</div>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
+                            <div class="border-t border-slate-100 pt-4">
+                                <div class="flex gap-3">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
+                                    <p>We're a leading provider of business loans, specializing in low-credit solutions and fast funding.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;">
+                        <div class="flex justify-between items-center p-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
+                                <span class="text-lg font-semibold text-slate-800">How does BizCashAndCapital work?</span>
+                            </div>
+                            <div class="faq-toggle w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500" style="border-radius: 0;">+</div>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
+                            <div class="border-t border-slate-100 pt-4">
+                                <div class="flex gap-3">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
+                                    <p>Streamlined online application, holistic review, and funding within days.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;">
+                        <div class="flex justify-between items-center p-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
+                                <span class="text-lg font-semibold text-slate-800">No worries about a bad credit score?</span>
+                            </div>
+                            <div class="faq-toggle w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500" style="border-radius: 0;">+</div>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
+                            <div class="border-t border-slate-100 pt-4">
+                                <div class="flex gap-3">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
+                                    <p>Correct! We specialize in loans for businesses with low credit scores.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item bg-white border border-slate-100 overflow-hidden transition-all duration-300 cursor-pointer shadow-sm hover:shadow-md" style="border-radius: 0;">
+                        <div class="flex justify-between items-center p-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-8 h-8 bg-green-100 flex items-center justify-center text-green-600 font-bold" style="border-radius: 0;">Q</div>
+                                <span class="text-lg font-semibold text-slate-800">What are the criteria for loan application?</span>
+                            </div>
+                            <div class="faq-toggle w-7 h-7 border border-slate-200 flex items-center justify-center text-lg font-semibold transition-all duration-300 hover:bg-green-500 hover:text-white hover:border-green-500" style="border-radius: 0;">+</div>
+                        </div>
+                        <div class="faq-answer px-6 pb-6 pt-0 text-slate-500 text-sm leading-relaxed hidden">
+                            <div class="border-t border-slate-100 pt-4">
+                                <div class="flex gap-3">
+                                    <div class="w-1.5 h-1.5 bg-green-500 rounded-full mt-1.5"></div>
+                                    <p>Minimum 6 months in business. Simple documentation required.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="text-center mt-12 scroll-reveal">
+            <p class="text-slate-500 text-sm">Still have questions? <a href="#" class="text-green-600 font-medium hover:underline">Contact our support team</a> for personalized assistance.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    // FAQ Toggle Function - Working Fixed
+    function toggleFaq(element) {
+        // Find the answer div within this FAQ item
+        const answer = element.querySelector('.faq-answer');
+        const toggle = element.querySelector('.faq-toggle');
+        
+        // Toggle the answer visibility
+        if (answer.classList.contains('hidden')) {
+            answer.classList.remove('hidden');
+            toggle.textContent = '−';
+            toggle.style.background = '#10b981';
+            toggle.style.color = 'white';
+            toggle.style.borderColor = '#10b981';
+        } else {
+            answer.classList.add('hidden');
+            toggle.textContent = '+';
+            toggle.style.background = '';
+            toggle.style.color = '';
+            toggle.style.borderColor = '';
+        }
+    }
+    
+    // Attach click event listeners to all FAQ items
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                // Don't trigger if clicking on the toggle button (prevents double toggle)
+                if (e.target.classList.contains('faq-toggle') || e.target.parentElement.classList.contains('faq-toggle')) {
+                    // Already handled by the toggle function, but we'll still toggle
+                }
+                toggleFaq(this);
+            });
+        });
+    });
+</script>
 
         <style>
             .faq-item.open .faq-toggle {
