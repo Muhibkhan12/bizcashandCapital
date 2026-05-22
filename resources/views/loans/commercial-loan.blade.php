@@ -449,16 +449,9 @@
     </div>
 </section>
 
-    <!-- CTA Section with Phone Number -->
-    <section style="padding: 4rem 0; background: #1a7a4a;">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem; text-align: center;">
-            <h2 style="font-size: 2rem; font-weight: 800; color: white; margin-bottom: 1rem;">Discuss your loan needs with our experts</h2>
-            <a href="tel:+12166470007" style="display: inline-flex; align-items: center; gap: 0.75rem; background: #c8e86a; color: #1a2a1a; padding: 1rem 2rem; font-weight: 800; font-size: 1.25rem; text-decoration: none; transition: all 0.3s ease; margin-bottom: 1rem;" onmouseover="this.style.backgroundColor='white'; this.style.transform='scale(1.05)'" onmouseout="this.style.backgroundColor='#c8e86a'; this.style.transform='scale(1)'">
-                📞 +1 (216) 647-0007
-            </a>
-            <p style="color: rgba(255,255,255,0.8); font-size: 0.875rem;">Call to Our Experts — Mon-Fri 9am-6pm EST</p>
-        </div>
-    </section>
+
+@include('application')
+
 @include('footer')
 
 </body>

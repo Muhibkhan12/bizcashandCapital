@@ -11,6 +11,9 @@ Route::get('/check', function () {
 Route::get('/commercial-loan', function () {
     return view('loans.commercial-loan');
 });
+Route::get('/business-loan', function () {
+    return view('loans.business-loan');
+});
 Route::get('/check2', function () {
     return view('check2');
 });
