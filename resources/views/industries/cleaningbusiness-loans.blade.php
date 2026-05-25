@@ -106,8 +106,8 @@
                 At BizCashAndCapital, we understand the crucial role cleaning businesses play in maintaining a hygienic and orderly environment. To support this industry, we specialize in providing tailored financing solutions for cleaning business owners. Our mission is to ensure that every cleaning business has the financial foundation required to thrive and make the world a cleaner, healthier place.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Get Started Now →</a>
-                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Contact Experts</a>
+                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Get Started Now →</a>
+                <a href="{{ route('contact-page') }}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Contact Experts</a>
             </div>
         </div>
     </section>

@@ -64,8 +64,8 @@
                 Welcome to BizCashAndCapital, where we understand the vital role convenience stores play in our communities. We provide tailored funding solutions for convenience store owners, ensuring they have the financial support required to thrive and serve their neighborhoods effectively.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="#" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
-                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
+                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
+                <a href="{{'route('contact-page')'}}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
             </div>
         </div>
     </section>

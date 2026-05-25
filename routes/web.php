@@ -70,3 +70,6 @@ Route::get('/day-care-loan', function(){
 Route::get('/check2',function(){
     return view('check2');
 });
+Route::get('/apply-now',function(){
+    return view('apply-now');
+})->name('apply-loan');
