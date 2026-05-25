@@ -204,8 +204,8 @@
                 At BizCashAndCapital, we understand that maintaining a vehicle can sometimes bring unexpected financial strain. Car repairs and maintenance are essential to keep you on the road safely, but the costs involved can catch you off guard. That's why we offer specialized funding solutions tailored to support your auto repair needs.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
-                <a href="{{'route('contact-page')'}}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
+                <a href="{{ route('apply-loan') }}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
+                <a href="{{ url('/contact') }}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
             </div>
         </div>
     </section>

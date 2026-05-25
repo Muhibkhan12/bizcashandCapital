@@ -204,8 +204,8 @@
             At BizCashAndCapital, we understand that beauty salons are not just places for beauty treatments, they are spaces where individuals enhance their confidence and express their unique style. To support the beauty industry's growth, we specialize in advising tailored financing solutions for beauty salon owners. Our mission is to ensure that every beauty salon has the financial foundation required to bring their glamorous vision to life.
         </p>
         <div class="flex gap-4 justify-center flex-wrap mt-8">
-            <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
-                <a href="{{'route('contact-page')'}}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
+            <a href="{{ route('apply-loan') }}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
+                <a href="{{ url('/contact') }}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
         </div>
     </div>
 </section>

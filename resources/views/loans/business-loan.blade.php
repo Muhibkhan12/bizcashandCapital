@@ -219,7 +219,8 @@
                 Business loans are crucial to give fresh businesses and startups the money they need for startup costs, working capital, expansion plans, and other particular finance requirements. We offer tailored loans to adjust your unique specifications, with low interest rates and flexible repayment terms.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Get Free Consultation</a>
             </div>
         </div>
     </section>

@@ -203,8 +203,8 @@
                 Welcome to BizCashAndCapital, where we understand the unique financial needs of attorney firms. We are committed to providing tailored funding solutions for legal practices, ensuring they have the financial support required to thrive, serve their clients effectively, and achieve legal excellence.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
-                <a href="{{'route('contact-page')'}}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
+                <a href="{{ route('apply-loan') }}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
+                <a href="{{ url('/contact') }}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
             </div>
         </div>
     </section>

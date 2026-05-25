@@ -95,8 +95,8 @@
                 Welcome to BizCashAndCapital, your trusted partner in providing tailored funding solutions for construction companies. We understand the construction industry's unique financial requirements and are committed to supporting your business's growth and success.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
-                <a href="{{'route('contact-page')'}}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
+                <a href="{{ route('apply-loan') }}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Get Started Now →</a>
+                <a href="{{ url('/contact') }}" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition">Contact Experts</a>
             </div>
         </div>
     </section>

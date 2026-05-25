@@ -50,8 +50,22 @@
                     </div>
                 </div>
                 
-                <!-- Contact Us Link -->
-                <a href="{{ url('/contact')}}" class="biz-contact-link text-white/80 hover:text-white text-sm font-medium transition-all duration-300 px-2 py-1">Contact Us</a>
+                <!-- Get Funded Button -->
+                <a href="{{ url('/apply-now')}}" class="biz-get-funded-btn bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
+                        <circle cx="12" cy="12" r="3"/>
+                    </svg>
+                    Get Funded
+                </a>
+                
+                <!-- Contact Us Button -->
+                <a href="{{ url('/contact')}}" class="biz-contact-btn bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 inline-flex items-center gap-2 border border-white/30">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    Contact Us
+                </a>
             </div>
             
             <!-- Mobile Menu Button (Hamburger) -->
@@ -67,6 +81,15 @@
     <!-- Mobile Menu Overlay -->
     <div class="biz-mobile-menu hidden lg:hidden w-full bg-white shadow-xl border-t border-gray-100" id="biz-mobile-menu">
         <div class="px-4 py-4 space-y-3">
+            <!-- Get Funded - Mobile (Prominent) -->
+            <a href="{{ url('/apply-now')}}" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3 rounded-lg font-semibold text-base transition-all duration-200 shadow-md">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                Get Funded Now
+            </a>
+            
             <!-- Mobile Industries Dropdown -->
             <div class="biz-mobile-dropdown w-full border-b border-gray-100 pb-2">
                 <button class="biz-mobile-dropdown-btn w-full flex justify-between items-center px-4 py-3 text-left text-slate-700 font-medium text-base bg-gray-50 hover:bg-emerald-50 transition-all duration-200 rounded-lg">
@@ -76,14 +99,14 @@
                     </svg>
                 </button>
                 <div class="biz-mobile-submenu mt-2 ml-4 space-y-2" style="display: none;">
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Auto Repair</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Attorney</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Cleaning Business</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Convenience Store</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Daycare</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Beauty Salon</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Accounting</a>
+                    <a href="{{ url('/auto-repair-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Auto Repair</a>
+                    <a href="{{ url('/attorney-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Attorney</a>
+                    <a href="{{ url('/cleaning-business')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Cleaning Business</a>
+                    <a href="{{ url('/construction-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction</a>
+                    <a href="{{ url('/convenience-store')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Convenience Store</a>
+                    <a href="{{ url('/day-care-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Daycare</a>
+                    <a href="{{ url('/beauty-saloon-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Beauty Salon</a>
+                    <a href="{{ url('/accounting-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Accounting</a>
                 </div>
             </div>
             
@@ -96,16 +119,21 @@
                     </svg>
                 </button>
                 <div class="biz-mobile-submenu mt-2 ml-4 space-y-2" style="display: none;">
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">SBA Loan</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Business Loan</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Commercial Loan</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction Loan</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Bridge Loan</a>
+                    <a href="{{url('/sba-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">SBA Loan</a>
+                    <a href="{{url('/business-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Business Loan</a>
+                    <a href="{{url('/commercial-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Commercial Loan</a>
+                    <a href="{{url('/contstruction-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction Loan</a>
+                    <a href="{{url('/bridge-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Bridge Loan</a>
                 </div>
             </div>
             
-            <!-- Mobile Contact Link -->
-            <a href="#contact" class="block px-4 py-3 text-slate-700 font-medium text-base bg-gray-50 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-all duration-200">Contact Us</a>
+            <!-- Mobile Contact Button -->
+            <a href="{{ url('/contact')}}" class="flex items-center justify-center gap-2 border border-emerald-600 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-semibold text-base transition-all duration-200">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Contact Us
+            </a>
         </div>
     </div>
 </div>
@@ -189,16 +217,29 @@
         transform: translateY(-1px);
     }
     
-    .biz-contact-link {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        font-size: 0.875rem;
-        font-weight: 500;
-        transition: all 0.3s ease;
+    /* Get Funded Button Styles */
+    .biz-get-funded-btn {
+        background: #1a7a4a;
+        color: white;
+        border-radius: 9999px;
+        box-shadow: 0 4px 12px rgba(26, 122, 74, 0.3);
     }
     
-    .biz-contact-link:hover {
-        color: white;
+    .biz-get-funded-btn:hover {
+        background: #0f5a38;
+        transform: scale(1.05);
+        box-shadow: 0 6px 16px rgba(26, 122, 74, 0.4);
+    }
+    
+    /* Contact Button Styles */
+    .biz-contact-btn {
+        border-radius: 9999px;
+        backdrop-filter: blur(4px);
+    }
+    
+    .biz-contact-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-1px);
     }
     
     /* Desktop Dropdown - FIXED */
@@ -261,12 +302,25 @@
         background: #e2e8f0;
     }
     
-    .biz-navbar-fixed.biz-navbar-scrolled .biz-contact-link {
-        color: #475569;
+    .biz-navbar-fixed.biz-navbar-scrolled .biz-get-funded-btn {
+        background: #1a7a4a;
+        color: white;
     }
     
-    .biz-navbar-fixed.biz-navbar-scrolled .biz-contact-link:hover {
+    .biz-navbar-fixed.biz-navbar-scrolled .biz-get-funded-btn:hover {
+        background: #0f5a38;
+    }
+    
+    .biz-navbar-fixed.biz-navbar-scrolled .biz-contact-btn {
+        background: rgba(0, 0, 0, 0.05);
         color: #1a7a4a;
+        border-color: #e2e8f0;
+    }
+    
+    .biz-navbar-fixed.biz-navbar-scrolled .biz-contact-btn:hover {
+        background: #1a7a4a;
+        color: white;
+        border-color: #1a7a4a;
     }
     
     .biz-navbar-fixed.biz-navbar-scrolled .biz-dropdown-menu {

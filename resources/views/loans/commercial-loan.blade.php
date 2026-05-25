@@ -203,7 +203,8 @@
                 Commercial loans are financing options that help businesses meet their financial freedom and accomplish certain goals. These loans can finance capital investments, buy merchandise, grow business operations, buy real estate, or expand business activities.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="{{ route('apply-loan')}}" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Get Free Consultation</a>
             </div>
         </div>
     </section>
