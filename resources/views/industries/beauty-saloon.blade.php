@@ -191,24 +191,24 @@
 
     @include('header')
 
-    <!-- Hero Section -->
-    <section class="relative h-[70vh] min-h-[450px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80" alt="Beauty salon interior" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-emerald-900/60 z-10"></div>
+<!-- Hero Section -->
+<section class="relative min-h-[550px] md:min-h-[600px] flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-12 md:pb-16">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1600&q=80" alt="Beauty salon interior" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-emerald-900/60 z-10"></div>
+    </div>
+    <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full text-center">
+        <h1 class="font-grotesk text-[clamp(42px,7vw,80px)] leading-[1.1] tracking-tight text-white mb-4">Beauty Salon Funding</h1>
+        <div class="w-24 h-1 bg-gradient-to-r from-[#c8e86a] to-[#1a7a4a] mx-auto mb-6"></div>
+        <p class="text-white/80 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+            At BizCashAndCapital, we understand that beauty salons are not just places for beauty treatments, they are spaces where individuals enhance their confidence and express their unique style. To support the beauty industry's growth, we specialize in advising tailored financing solutions for beauty salon owners. Our mission is to ensure that every beauty salon has the financial foundation required to bring their glamorous vision to life.
+        </p>
+        <div class="flex gap-4 justify-center flex-wrap mt-8">
+            <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Get Started Now →</a>
+            <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Contact Experts</a>
         </div>
-        <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full text-center">
-            <h1 class="font-grotesk text-[clamp(48px,7vw,90px)] leading-[1.1] tracking-tight text-white mb-4">Beauty Salon Funding</h1>
-            <div class="w-24 h-1 bg-gradient-to-r from-[#c8e86a] to-[#1a7a4a] mx-auto mb-6"></div>
-            <p class="text-white/80 text-base max-w-3xl mx-auto leading-relaxed">
-                At BizCashAndCapital, we understand that beauty salons are not just places for beauty treatments, they are spaces where individuals enhance their confidence and express their unique style. To support the beauty industry's growth, we specialize in advising tailored financing solutions for beauty salon owners. Our mission is to ensure that every beauty salon has the financial foundation required to bring their glamorous vision to life.
-            </p>
-            <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Get Started Now →</a>
-                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Contact Experts</a>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- The Significance of Funding for Beauty Salons Section -->
     <section style="padding: 5rem 0; background: white;">
