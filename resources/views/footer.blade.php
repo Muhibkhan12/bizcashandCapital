@@ -13,8 +13,8 @@
                 <div class="footer-link-group">
                     <h3 class="font-semibold text-slate-800 text-sm uppercase tracking-wider mb-4">Navigation</h3>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="text-slate-500 hover:text-green-600 transition-all duration-300 text-sm inline-block">Home</a></li>
-                        <li><a href="#apply" class="text-slate-500 hover:text-green-600 transition-all duration-300 text-sm inline-block">Contact</a></li>
+                        <li><a href="{{ url('/')}}" class="text-slate-500 hover:text-green-600 transition-all duration-300 text-sm inline-block">Home</a></li>
+                        <li><a href="{{ url('/contact') }}" class="text-slate-500 hover:text-green-600 transition-all duration-300 text-sm inline-block">Contact</a></li>
                     </ul>
                 </div>
 

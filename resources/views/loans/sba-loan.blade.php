@@ -17,6 +17,15 @@
                         'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
                         'grotesk': ['Space Grotesk', 'sans-serif'],
                     },
+                    colors: {
+                        'green-primary': '#10b981',
+                        'green-dark': '#059669',
+                        'green-forest': '#1a7a4a',
+                        'green-lime': '#c8e86a',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 2s infinite',
+                    }
                 }
             }
         }
@@ -31,7 +40,7 @@
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: #eef6ee;
+            background: #f5f7f5;
             color: #111a13;
             overflow-x: hidden;
         }
@@ -49,37 +58,13 @@
         }
 
         @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.5;
-                transform: scale(0.95);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.95); }
         }
 
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-15px);
-            }
-        }
-
-        .animate-pulse {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .btn-primary {
@@ -94,6 +79,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            border-radius: 0 !important;
         }
 
         .btn-primary:hover {
@@ -113,6 +99,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            border-radius: 0 !important;
         }
 
         .btn-outline:hover {
@@ -124,6 +111,7 @@
             transition: all 0.3s ease;
             cursor: pointer;
             border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 0 !important;
         }
         .card:hover {
             transform: translateY(-6px);
@@ -143,6 +131,7 @@
             letter-spacing: 0.06em;
             text-transform: uppercase;
             color: #1a7a4a;
+            border-radius: 0 !important;
         }
         .tag span {
             width: 6px;
@@ -150,11 +139,40 @@
             background: #1a7a4a;
             display: inline-block;
             animation: pulse 2s infinite;
+            border-radius: 0 !important;
         }
 
-        /* ============================================
-           BIZCASH NAVBAR - ISOLATED STYLES
-        ============================================ */
+        /* Force all elements to have sharp edges */
+        .rounded-2xl,
+        .rounded-3xl,
+        .rounded-xl,
+        .rounded-full,
+        [class*="rounded-"] {
+            border-radius: 0 !important;
+        }
+
+        button,
+        a,
+        div,
+        section,
+        .card,
+        .bg-white,
+        img {
+            border-radius: 0 !important;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.8s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navbar Styles */
         .biz-navbar-fixed {
             position: fixed;
             top: 0;
@@ -220,13 +238,13 @@
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(4px);
             padding: 0.375rem 1rem;
-            border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 600;
             color: #ffffff;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0 !important;
         }
         
         .biz-pill:hover {
@@ -324,14 +342,6 @@
                 font-size: 0.7rem;
                 padding: 0.25rem 0.75rem;
             }
-            .biz-dropdown-menu {
-                position: fixed;
-                top: auto;
-                left: 1rem;
-                right: 1rem;
-                width: auto;
-                margin-top: 0.5rem;
-            }
         }
     </style>
 </head>
@@ -354,11 +364,11 @@
                         <span class="text-[11px] font-semibold text-white/80 tracking-wider">BEST BUSINESS LOANS</span>
                     </div>
                 </div>
-                <h1 class="font-jakarta text-[clamp(56px,8vw,120px)] leading-[1.05] tracking-tight text-white mb-6">SBA LOAN</h1>
-                <div class="w-24 h-1 bg-gradient-to-r from-lime-400 to-emerald-500 mx-auto mb-6"></div>
+                <h1 class="font-grotesk text-[clamp(56px,8vw,120px)] leading-[1.05] tracking-tight text-white mb-6">SBA LOAN</h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-[#c8e86a] to-[#1a7a4a] mx-auto mb-6"></div>
                 <p class="text-white/80 text-base max-w-2xl mx-auto leading-relaxed">Get the funding you need with our fast, flexible loan solutions. No hidden fees, no endless paperwork, and bad credit welcome.</p>
                 <div class="flex gap-4 justify-center flex-wrap mt-8">
-                    <a href="#" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
                     <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Learn More</a>
                 </div>
             </div>
@@ -368,16 +378,16 @@
     <!-- SBA Loan Types Section - Full visible background images -->
     <section style="padding: 5rem 0; background: #f5f7f5;">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
-            <div style="text-align: center; margin-bottom: 3rem;">
+            <div style="text-align: center; margin-bottom: 3rem;" class="scroll-reveal">
                 <div class="tag" style="display: inline-flex; margin-bottom: 1rem;"><span></span>TYPES OF SBA BUSINESS LOANS</div>
-                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #1a2a1a;">We offer fantastic lending choices<br>for small businesses</h2>
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: #1a2a1a; font-family: 'Space Grotesk', sans-serif;">We offer fantastic lending choices<br>for small businesses</h2>
                 <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #1a7a4a, #c8e86a); margin: 1rem auto;"></div>
                 <p style="color: #4a5a4a; max-width: 700px; margin: 0 auto;">Here at BizCashAndCapital, we offer fantastic lending choices for small businesses since we provide favorable conditions and low-interest rates.</p>
             </div>
 
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
 
-                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop'); background-size: cover; background-position: center; min-height: 420px; position: relative; overflow: hidden;">
+                <div class="card scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop'); background-size: cover; background-position: center; min-height: 420px; position: relative; overflow: hidden;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(26,122,74,0.85) 100%); z-index: 1;"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
                         <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
@@ -385,7 +395,7 @@
                                 <path d="M3 6h18M8 6V4h8v2M6 10h12M5 18h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                             </svg>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: white;">SBA 7(a) Loan</h3>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: white; font-family: 'Space Grotesk', sans-serif;">SBA 7(a) Loan</h3>
                         <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem 0;"></div>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.6; margin-top: 1rem;">
                             The most popular and versatile SBA loan provides funds for working capital, equipment purchase, debt consolidation, and more. SBA 7(a) loans can range up to <strong style="color: #c8e86a;">$5 million</strong> and have flexible terms.
@@ -393,7 +403,7 @@
                     </div>
                 </div>
 
-                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=500&fit=crop'); background-size: cover; background-position: center; min-height: 420px; position: relative; overflow: hidden;">
+                <div class="card scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=500&fit=crop'); background-size: cover; background-position: center; min-height: 420px; position: relative; overflow: hidden;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(26,122,74,0.85) 100%); z-index: 1;"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
                         <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
@@ -402,7 +412,7 @@
                                 <path d="M9 22V12h6v10" />
                             </svg>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: white;">SBA 504 Loan</h3>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: white; font-family: 'Space Grotesk', sans-serif;">SBA 504 Loan</h3>
                         <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem 0;"></div>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.6; margin-top: 1rem;">
                             Ideal for businesses requiring real estate or equipment financing, the SBA 504 loan provides long-term, fixed-rate financing for major assets, promoting business expansion and job creation.
@@ -410,7 +420,7 @@
                     </div>
                 </div>
 
-                <div class="card" style="background-image: url('https://images.unsplash.com/photo-1559526924-8bb3c4f5c9e5?w=600&h=500&fit=crop'); background-size: cover; background-position: center; min-height: 420px; position: relative; overflow: hidden;">
+                <div class="card scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1559526924-8bb3c4f5c9e5?w=600&h=500&fit=crop'); background-size: cover; background-position: center; min-height: 420px; position: relative; overflow: hidden;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(26,122,74,0.85) 100%); z-index: 1;"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem; height: 100%; display: flex; flex-direction: column; justify-content: flex-start;">
                         <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1a7a4a, #0f5a38); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
@@ -419,7 +429,7 @@
                                 <polyline points="12 6 12 12 16 14" />
                             </svg>
                         </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: white;">SBA Microloan</h3>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 0.5rem; color: white; font-family: 'Space Grotesk', sans-serif;">SBA Microloan</h3>
                         <div style="width: 50px; height: 2px; background: linear-gradient(90deg, #c8e86a, #1a7a4a); margin: 0.75rem 0;"></div>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.9rem; line-height: 1.6; margin-top: 1rem;">
                             For startups and small businesses, microloans offer up to <strong style="color: #c8e86a;">$50,000</strong> to cover working capital, equipment, or inventory expenses. These loans come with a shorter term.
@@ -434,39 +444,39 @@
     <section style="padding: 5rem 0; background: white;">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 3rem; align-items: center;">
-                <div>
+                <div class="scroll-reveal">
                     <div class="tag" style="margin-bottom: 1rem;"><span></span>HOW TO APPLY</div>
-                    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">How to Apply for<br>SBA Business Loans</h2>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">How to Apply for<br>SBA Business Loans</h2>
                     <div style="width: 60px; height: 3px; background: linear-gradient(90deg, #1a7a4a, #c8e86a); margin-bottom: 1.5rem;"></div>
                     <div class="space-y-4">
                         <div class="flex gap-3 items-start">
-                            <div class="w-6 h-6 bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">1</div>
+                            <div class="w-6 h-6 bg-[#1a7a4a] text-white flex items-center justify-center text-xs font-bold">1</div>
                             <p class="text-slate-600">Verify that you meet the eligibility criteria for the loan you are applying for</p>
                         </div>
                         <div class="flex gap-3 items-start">
-                            <div class="w-6 h-6 bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">2</div>
+                            <div class="w-6 h-6 bg-[#1a7a4a] text-white flex items-center justify-center text-xs font-bold">2</div>
                             <p class="text-slate-600">Have a solid business plan</p>
                         </div>
                         <div class="flex gap-3 items-start">
-                            <div class="w-6 h-6 bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">3</div>
+                            <div class="w-6 h-6 bg-[#1a7a4a] text-white flex items-center justify-center text-xs font-bold">3</div>
                             <p class="text-slate-600">Complete the necessary paperwork in advance</p>
                         </div>
                         <div class="flex gap-3 items-start">
-                            <div class="w-6 h-6 bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">4</div>
+                            <div class="w-6 h-6 bg-[#1a7a4a] text-white flex items-center justify-center text-xs font-bold">4</div>
                             <p class="text-slate-600">Be ready to respond to queries about the business you run</p>
                         </div>
                         <div class="flex gap-3 items-start">
-                            <div class="w-6 h-6 bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">5</div>
-                            <p class="text-slate-600">Show patience. Application for an SBA loan can take weeks or even months. <strong class="text-emerald-600">But here at BizCashAndCapital, we get you fundings as soon as possible!</strong></p>
+                            <div class="w-6 h-6 bg-[#1a7a4a] text-white flex items-center justify-center text-xs font-bold">5</div>
+                            <p class="text-slate-600"><strong class="text-[#1a7a4a]">Patience meets speed:</strong> Traditional SBA loans can take weeks or months — but we're different. At BizCashAndCapital, we fast-track your funding so you get capital when you need it most.</p>
                         </div>
                     </div>
                 </div>
-                <div style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=500&fit=crop'); background-size: cover; background-position: center; padding: 2.5rem; color: white; text-align: center; position: relative; overflow: hidden; border: 1px solid #e2e8e2;">
+                <div class="scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&h=500&fit=crop'); background-size: cover; background-position: center; padding: 2.5rem; color: white; text-align: center; position: relative; overflow: hidden; border: 1px solid #e2e8e2;">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, #1a7a4a, #0f5a38); opacity: 0.92;"></div>
                     <div style="position: relative; z-index: 2;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Talk to Our Trusted<br>Financial Advisors</h3>
+                        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Talk to Our Trusted<br>Financial Advisors</h3>
                         <p style="margin-bottom: 1.5rem; line-height: 1.6;">Finding the landscape of SBA loans can be huge, but our team of expert advisors is here to simplify the process for you.</p>
-                        <a href="tel:+12166470007" class="inline-flex items-center gap-2 bg-white text-emerald-700 px-6 py-3 font-bold text-sm hover:bg-lime-400 transition">Call +1 (216) 647-0007 →</a>
+                        <a href="tel:+12166470007" class="inline-flex items-center gap-2 bg-white text-[#1a7a4a] px-6 py-3 font-bold text-sm hover:bg-[#c8e86a] transition">Call +1 (216) 647-0007 →</a>
                     </div>
                 </div>
             </div>
@@ -476,45 +486,45 @@
     <!-- Why Choose SBA Loans Section -->
     <section style="padding: 5rem 0; background: #f5f7f5;">
         <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
-            <div style="text-align: center; margin-bottom: 3rem;">
+            <div style="text-align: center; margin-bottom: 3rem;" class="scroll-reveal">
                 <div class="tag" style="display: inline-flex; margin-bottom: 1rem;"><span></span>WHY CHOOSE SBA LOANS</div>
-                <h2 style="font-size: 2.5rem; font-weight: 800; margin-top: 1rem; color: #1a2a1a;">Benefits of SBA Business Loans</h2>
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-top: 1rem; color: #1a2a1a; font-family: 'Space Grotesk', sans-serif;">Benefits of SBA Business Loans</h2>
                 <div style="width: 80px; height: 3px; background: linear-gradient(90deg, #1a7a4a, #c8e86a); margin: 1rem auto;"></div>
             </div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                <div style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
+                <div class="scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 35px -12px rgba(26,122,74,0.15)'; this.style.borderColor='#1a7a4a';"
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e2e8e2';">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,122,74,0.85), rgba(15,90,56,0.9));"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem 1.5rem; text-align: center; min-height: 280px; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem;">Low Interest Rates</h3>
+                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem; font-family: 'Space Grotesk', sans-serif;">Low Interest Rates</h3>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.5;">Competitive rates backed by government guarantee</p>
                     </div>
                 </div>
-                <div style="background-image: url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
+                <div class="scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 35px -12px rgba(26,122,74,0.15)'; this.style.borderColor='#1a7a4a';"
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e2e8e2';">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,122,74,0.85), rgba(15,90,56,0.9));"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem 1.5rem; text-align: center; min-height: 280px; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem;">High Loan Amounts</h3>
+                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem; font-family: 'Space Grotesk', sans-serif;">High Loan Amounts</h3>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.5;">Up to $5 million for qualifying businesses</p>
                     </div>
                 </div>
-                <div style="background-image: url('https://images.unsplash.com/photo-1559526924-8bb3c4f5c9e5?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
+                <div class="scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1559526924-8bb3c4f5c9e5?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 35px -12px rgba(26,122,74,0.15)'; this.style.borderColor='#1a7a4a';"
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e2e8e2';">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,122,74,0.85), rgba(15,90,56,0.9));"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem 1.5rem; text-align: center; min-height: 280px; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem;">Flexible Terms</h3>
+                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem; font-family: 'Space Grotesk', sans-serif;">Flexible Terms</h3>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.5;">Long repayment terms to suit your cash flow</p>
                     </div>
                 </div>
-                <div style="background-image: url('https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
+                <div class="scroll-reveal" style="background-image: url('https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?w=600&h=500&fit=crop'); background-size: cover; background-position: center; position: relative; min-height: 280px; border: 1px solid #e2e8e2; transition: all 0.3s ease; cursor: pointer;"
                     onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 20px 35px -12px rgba(26,122,74,0.15)'; this.style.borderColor='#1a7a4a';"
                     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e2e8e2';">
                     <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,122,74,0.85), rgba(15,90,56,0.9));"></div>
                     <div style="position: relative; z-index: 2; padding: 2rem 1.5rem; text-align: center; min-height: 280px; display: flex; flex-direction: column; justify-content: center;">
-                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem;">Government Backed</h3>
+                        <h3 style="font-size: 1.6rem; font-weight: 800; color: white; margin-bottom: 0.75rem; font-family: 'Space Grotesk', sans-serif;">Government Backed</h3>
                         <p style="color: rgba(255,255,255,0.9); font-size: 0.95rem; line-height: 1.5;">Partial government guarantee for lenders</p>
                     </div>
                 </div>
@@ -522,43 +532,8 @@
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- FOOTER - Integrated -->
-    <!-- ============================================ -->
-    <footer style="background: #111811; color: #9ca3af; padding: 3rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
-        <div style="max-width: 1280px; margin: 0 auto; padding: 0 2rem;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                <div>
-                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                        <div style="width: 32px; height: 32px; background: #1a7a4a;"></div>
-                        <span style="font-weight: 700; color: white; font-size: 1.2rem;">BizCash&Capital</span>
-                    </div>
-                    <p style="font-size: 0.875rem;">Your trusted partner for SBA business loans and financial resources.</p>
-                </div>
-                <div>
-                    <h4 style="font-weight: 700; color: white; margin-bottom: 1rem;">Quick Links</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">Home</a></li>
-                        <li class="mt-2"><a href="#" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">SBA Loans</a></li>
-                        <li class="mt-2"><a href="#" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">FAQs</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-weight: 700; color: white; margin-bottom: 1rem;">Legal</h4>
-                    <ul style="list-style: none;">
-                        <li><a href="#" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">Privacy Policy</a></li>
-                        <li class="mt-2"><a href="#" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 style="font-weight: 700; color: white; margin-bottom: 1rem;">Contact</h4>
-                    <p style="font-size: 0.875rem;">📞 <a href="tel:+12166470007" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">+1 (216) 647-0007</a></p>
-                    <p style="font-size: 0.875rem; margin-top: 0.5rem;">✉️ <a href="mailto:info@bizcashandcapital.com" style="color: #9ca3af; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#1a7a4a'" onmouseout="this.style.color='#9ca3af'">info@bizcashandcapital.com</a></p>
-                </div>
-            </div>
-            <div style="border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; text-align: center; font-size: 0.75rem;">© All Copyright 2025 by BizCashandCapital.com</div>
-        </div>
-    </footer>
+    @include('application')
+    @include('footer')
 
     <!-- Navbar Scroll Script -->
     <script>
@@ -605,6 +580,20 @@
                 bizNavbar.classList.add('biz-navbar-visible');
             });
         })();
+    </script>
+
+    <!-- Scroll Reveal Script -->
+    <script>
+        const scrollElements = document.querySelectorAll('.scroll-reveal');
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    scrollObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        scrollElements.forEach(el => scrollObserver.observe(el));
     </script>
 </body>
 
