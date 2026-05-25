@@ -1,17 +1,17 @@
 <!-- Navbar - Fully Responsive with Mobile Menu (Dropdowns Fixed) -->
 <div id="biz-navbar" class="biz-navbar-fixed w-full fixed top-0 z-50 transition-all duration-500 ease-in-out">
     <div class="biz-navbar-container max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-        <div class="biz-navbar-flex flex justify-between items-center py-3 md:py-4">
+        <div class="biz-navbar-flex flex justify-between items-center py-2 md:py-4">
             <!-- Logo as Image instead of Text -->
             <a href="/" class="biz-logo-link">
-                <img src="{{ asset('images/logo-1.png')}}" alt="BizCash&Capital Logo" class="biz-logo-img h-8 md:h-10 w-auto hover:scale-105 transition-transform duration-300">
+                <img src="{{ asset('images/logo-1.png')}}" alt="BizCash&Capital Logo" class="biz-logo-img h-7 sm:h-8 md:h-10 w-auto hover:scale-105 transition-transform duration-300">
             </a>
             
             <!-- Desktop Navigation Links -->
-            <div class="biz-desktop-nav hidden lg:flex items-center gap-6 xl:gap-8">
+            <div class="biz-desktop-nav hidden lg:flex items-center gap-4 xl:gap-8">
                 <!-- Industries Dropdown -->
                 <div class="biz-dropdown relative">
-                    <span class="biz-dropdown-trigger biz-pill bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-semibold text-white hover:bg-white/20 transition-all duration-300 cursor-pointer border border-white/20 inline-flex items-center gap-2">
+                    <span class="biz-dropdown-trigger biz-pill bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full text-xs font-semibold text-white hover:bg-white/20 transition-all duration-300 cursor-pointer border border-white/20 inline-flex items-center gap-1.5">
                         Industries
                         <svg class="biz-dropdown-arrow w-3 h-3 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -33,7 +33,7 @@
                 
                 <!-- Loan Programs Dropdown -->
                 <div class="biz-dropdown relative">
-                    <span class="biz-dropdown-trigger biz-pill bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-semibold text-white hover:bg-white/20 transition-all duration-300 cursor-pointer border border-white/20 inline-flex items-center gap-2">
+                    <span class="biz-dropdown-trigger biz-pill bg-white/10 backdrop-blur-sm px-3 md:px-4 py-1.5 rounded-full text-xs font-semibold text-white hover:bg-white/20 transition-all duration-300 cursor-pointer border border-white/20 inline-flex items-center gap-1.5">
                         Loan Programs
                         <svg class="biz-dropdown-arrow w-3 h-3 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <polyline points="6 9 12 15 18 9"></polyline>
@@ -51,8 +51,8 @@
                 </div>
                 
                 <!-- Get Funded Button -->
-                <a href="{{ url('/apply-now')}}" class="biz-get-funded-btn bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-2">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="{{ url('/apply-now')}}" class="biz-get-funded-btn bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 inline-flex items-center gap-1.5">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
                         <circle cx="12" cy="12" r="3"/>
                     </svg>
@@ -60,8 +60,8 @@
                 </a>
                 
                 <!-- Contact Us Button -->
-                <a href="{{ url('/contact')}}" class="biz-contact-btn bg-white/20 hover:bg-white/30 text-white px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 inline-flex items-center gap-2 border border-white/30">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <a href="{{ url('/contact')}}" class="biz-contact-btn bg-white/20 hover:bg-white/30 text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-semibold transition-all duration-300 inline-flex items-center gap-1.5 border border-white/30">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                     Contact Us
@@ -70,7 +70,7 @@
             
             <!-- Mobile Menu Button (Hamburger) -->
             <button class="biz-mobile-menu-btn lg:hidden text-white focus:outline-none transition-all duration-300 hover:scale-110" id="biz-menu-btn">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" class="biz-menu-icon"/>
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="biz-close-icon hidden"/>
                 </svg>
@@ -78,12 +78,12 @@
         </div>
     </div>
     
-    <!-- Mobile Menu Overlay -->
-    <div class="biz-mobile-menu hidden lg:hidden w-full bg-white shadow-xl border-t border-gray-100" id="biz-mobile-menu">
-        <div class="px-4 py-4 space-y-3">
+    <!-- Mobile Menu Overlay - FULL HEIGHT -->
+    <div class="biz-mobile-menu hidden lg:hidden w-full bg-white shadow-xl border-t border-gray-100 fixed left-0" style="height: calc(100vh - 56px); overflow-y: auto;" id="biz-mobile-menu">
+        <div class="px-4 py-3 space-y-2">
             <!-- Get Funded - Mobile (Prominent) -->
-            <a href="{{ url('/apply-now')}}" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-3 rounded-lg font-semibold text-base transition-all duration-200 shadow-md">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <a href="{{ url('/apply-now')}}" class="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-4 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-md">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/>
                     <circle cx="12" cy="12" r="3"/>
                 </svg>
@@ -91,45 +91,45 @@
             </a>
             
             <!-- Mobile Industries Dropdown -->
-            <div class="biz-mobile-dropdown w-full border-b border-gray-100 pb-2">
-                <button class="biz-mobile-dropdown-btn w-full flex justify-between items-center px-4 py-3 text-left text-slate-700 font-medium text-base bg-gray-50 hover:bg-emerald-50 transition-all duration-200 rounded-lg">
+            <div class="biz-mobile-dropdown w-full border-b border-gray-100">
+                <button class="biz-mobile-dropdown-btn w-full flex justify-between items-center px-3 py-2.5 text-left text-slate-700 font-medium text-sm bg-gray-50 hover:bg-emerald-50 transition-all duration-200 rounded-lg">
                     Industries
-                    <svg class="biz-mobile-arrow w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="biz-mobile-arrow w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
-                <div class="biz-mobile-submenu mt-2 ml-4 space-y-2" style="display: none;">
-                    <a href="{{ url('/auto-repair-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Auto Repair</a>
-                    <a href="{{ url('/attorney-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Attorney</a>
-                    <a href="{{ url('/cleaning-business')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Cleaning Business</a>
-                    <a href="{{ url('/construction-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction</a>
-                    <a href="{{ url('/convenience-store')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Convenience Store</a>
-                    <a href="{{ url('/day-care-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Daycare</a>
-                    <a href="{{ url('/beauty-saloon-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Beauty Salon</a>
-                    <a href="{{ url('/accounting-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Accounting</a>
+                <div class="biz-mobile-submenu mt-1 ml-3 space-y-1" style="display: none;">
+                    <a href="{{ url('/auto-repair-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Auto Repair</a>
+                    <a href="{{ url('/attorney-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Attorney</a>
+                    <a href="{{ url('/cleaning-business')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Cleaning Business</a>
+                    <a href="{{ url('/construction-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction</a>
+                    <a href="{{ url('/convenience-store')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Convenience Store</a>
+                    <a href="{{ url('/day-care-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Daycare</a>
+                    <a href="{{ url('/beauty-saloon-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Beauty Salon</a>
+                    <a href="{{ url('/accounting-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Accounting</a>
                 </div>
             </div>
             
             <!-- Mobile Loan Programs Dropdown -->
-            <div class="biz-mobile-dropdown w-full border-b border-gray-100 pb-2">
-                <button class="biz-mobile-dropdown-btn w-full flex justify-between items-center px-4 py-3 text-left text-slate-700 font-medium text-base bg-gray-50 hover:bg-emerald-50 transition-all duration-200 rounded-lg">
+            <div class="biz-mobile-dropdown w-full border-b border-gray-100">
+                <button class="biz-mobile-dropdown-btn w-full flex justify-between items-center px-3 py-2.5 text-left text-slate-700 font-medium text-sm bg-gray-50 hover:bg-emerald-50 transition-all duration-200 rounded-lg">
                     Loan Programs
-                    <svg class="biz-mobile-arrow w-4 h-4 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="biz-mobile-arrow w-3.5 h-3.5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
                 </button>
-                <div class="biz-mobile-submenu mt-2 ml-4 space-y-2" style="display: none;">
-                    <a href="{{url('/sba-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">SBA Loan</a>
-                    <a href="{{url('/business-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Business Loan</a>
-                    <a href="{{url('/commercial-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Commercial Loan</a>
-                    <a href="{{url('/contstruction-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction Loan</a>
-                    <a href="{{url('/bridge-loan')}}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Bridge Loan</a>
+                <div class="biz-mobile-submenu mt-1 ml-3 space-y-1" style="display: none;">
+                    <a href="{{url('/sba-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">SBA Loan</a>
+                    <a href="{{url('/business-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Business Loan</a>
+                    <a href="{{url('/commercial-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Commercial Loan</a>
+                    <a href="{{url('/contstruction-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Construction Loan</a>
+                    <a href="{{url('/bridge-loan')}}" class="block px-3 py-2 text-sm text-slate-600 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition-colors duration-200">Bridge Loan</a>
                 </div>
             </div>
             
             <!-- Mobile Contact Button -->
-            <a href="{{ url('/contact')}}" class="flex items-center justify-center gap-2 border border-emerald-600 text-emerald-700 hover:bg-emerald-50 px-4 py-3 rounded-lg font-semibold text-base transition-all duration-200">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <a href="{{ url('/contact')}}" class="flex items-center justify-center gap-2 border border-emerald-600 text-emerald-700 hover:bg-emerald-50 px-3 py-2.5 rounded-lg font-semibold text-sm transition-all duration-200">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
                 Contact Us
@@ -140,7 +140,7 @@
 
 <style>
     /* ============================================
-       BIZCASH NAVBAR - WITH IMAGE LOGO
+       BIZCASH NAVBAR - FULLY RESPONSIVE
     ============================================ */
     
     .biz-navbar-fixed {
@@ -174,8 +174,8 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
     }
     
     /* Logo Image Styles */
@@ -185,7 +185,7 @@
     }
     
     .biz-logo-img {
-        height: 40px;
+        height: 28px;
         width: auto;
         transition: transform 0.3s ease;
         object-fit: contain;
@@ -202,9 +202,9 @@
     .biz-pill {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(4px);
-        padding: 0.375rem 1rem;
+        padding: 0.3rem 0.75rem;
         border-radius: 9999px;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         font-weight: 600;
         color: #ffffff;
         cursor: pointer;
@@ -267,16 +267,22 @@
         background: transparent;
         border: none;
         cursor: pointer;
-        padding: 0.5rem;
+        padding: 0.4rem;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     
-    /* Mobile Menu */
+    /* Mobile Menu - FULL HEIGHT */
     .biz-mobile-menu {
-        max-height: calc(100vh - 60px);
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 56px;
+        bottom: 0;
+        z-index: 9998;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
     
     .biz-mobile-dropdown-btn {
@@ -336,15 +342,47 @@
         background: white;
     }
     
-    /* Tablet (768px - 1024px) */
-    @media (min-width: 768px) {
+    /* Small Mobile (up to 480px) */
+    @media (max-width: 480px) {
         .biz-navbar-flex {
-            padding-top: 1rem;
-            padding-bottom: 1rem;
+            padding-top: 0.35rem;
+            padding-bottom: 0.35rem;
         }
         
         .biz-logo-img {
-            height: 45px;
+            height: 24px;
+        }
+        
+        .biz-mobile-menu {
+            top: 52px;
+        }
+        
+        .biz-mobile-dropdown-btn {
+            padding: 0.5rem 0.75rem;
+            font-size: 0.8rem;
+        }
+    }
+    
+    /* Tablet (640px - 768px) */
+    @media (min-width: 640px) {
+        .biz-logo-img {
+            height: 32px;
+        }
+    }
+    
+    /* Tablet (768px - 1024px) */
+    @media (min-width: 768px) {
+        .biz-navbar-flex {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        
+        .biz-logo-img {
+            height: 38px;
+        }
+        
+        .biz-mobile-menu {
+            top: 60px;
         }
     }
     
@@ -363,7 +401,16 @@
         }
         
         .biz-logo-img {
-            height: 50px;
+            height: 45px;
+        }
+        
+        .biz-pill {
+            padding: 0.375rem 1rem;
+            font-size: 0.75rem;
+        }
+        
+        .biz-get-funded-btn {
+            padding: 0.375rem 1.25rem;
         }
     }
     
@@ -371,6 +418,19 @@
     @media (min-width: 1280px) {
         .biz-desktop-nav {
             gap: 2rem;
+        }
+        
+        .biz-logo-img {
+            height: 50px;
+        }
+        
+        .biz-pill {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.8rem;
+        }
+        
+        .biz-get-funded-btn {
+            padding: 0.5rem 1.5rem;
         }
     }
 </style>
@@ -396,15 +456,17 @@
                     mobileMenu.classList.remove('hidden');
                     if (menuIcon) menuIcon.classList.add('hidden');
                     if (closeIcon) closeIcon.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
                 } else {
                     mobileMenu.classList.add('hidden');
                     if (menuIcon) menuIcon.classList.remove('hidden');
                     if (closeIcon) closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
                 }
             });
         }
         
-        // Mobile Dropdown Toggle - FIXED
+        // Mobile Dropdown Toggle
         const mobileDropdownBtns = document.querySelectorAll('.biz-mobile-dropdown-btn');
         mobileDropdownBtns.forEach(btn => {
             btn.addEventListener('click', function(e) {
@@ -437,8 +499,8 @@
                     const closeIcon = menuBtn?.querySelector('.biz-close-icon');
                     if (menuIcon) menuIcon.classList.remove('hidden');
                     if (closeIcon) closeIcon.classList.add('hidden');
+                    document.body.style.overflow = '';
                     
-                    // Reset all mobile submenus
                     document.querySelectorAll('.biz-mobile-submenu').forEach(sub => {
                         sub.style.display = 'none';
                     });
@@ -449,7 +511,7 @@
             }
         });
         
-        // Close mobile menu on window resize (if switching to desktop)
+        // Close mobile menu on window resize
         window.addEventListener('resize', function() {
             if (window.innerWidth >= 1024 && mobileMenu && !mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
@@ -457,6 +519,7 @@
                 const closeIcon = menuBtn?.querySelector('.biz-close-icon');
                 if (menuIcon) menuIcon.classList.remove('hidden');
                 if (closeIcon) closeIcon.classList.add('hidden');
+                document.body.style.overflow = '';
             }
         });
         
