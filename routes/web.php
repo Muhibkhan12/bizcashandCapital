@@ -83,4 +83,7 @@ Route::get('get-admin-access-for-bcac', function(){
 Route::get('/admin-dashboard',function(){
     return view('admin.dashboard');
 });
+Route::get('/change-password',function(){
+    return view('admin.changePassword');
+});
 // Route::get('/admin-dashboard',[])
