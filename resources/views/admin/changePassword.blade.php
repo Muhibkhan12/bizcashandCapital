@@ -225,10 +225,9 @@
         }
     </style>
 </head>
-
 <body>
+    @include('sidebar');
 
-    @include('header')
 
     <!-- Change Password Section -->
     <section style="min-height: calc(100vh - 80px); display: flex; align-items: center; justify-content: center; padding: 6rem 1.5rem 4rem 1.5rem; background: linear-gradient(135deg, #f5f7f5 0%, #eef2ee 100%); position: relative; overflow: hidden;">
@@ -375,7 +374,6 @@
         <span id="toastMessage"></span>
     </div>
 
-    @include('footer')
 
     <script>
         // Toggle password visibility
