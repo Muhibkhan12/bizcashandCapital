@@ -73,3 +73,14 @@ Route::get('/check2',function(){
 Route::get('/apply-now',function(){
     return view('apply-now');
 })->name('apply-loan');
+
+
+// FOR ADMIN
+
+Route::get('get-admin-access-for-bcac', function(){
+    return view('admin.login');
+});
+Route::get('/admin-dashboard',function(){
+    return view('admin.dashboard');
+});
+// Route::get('/admin-dashboard',[])
