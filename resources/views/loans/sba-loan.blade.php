@@ -350,8 +350,8 @@
 
 @include('header')
 
-    <!-- Hero Section -->
-    <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+    <!-- Hero Section - Fixed with proper padding -->
+    <section class="relative min-h-[550px] md:min-h-[600px] flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-12 md:pb-16">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1600&q=80" alt="Business growth background" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-br from-black/60 via-black/50 to-emerald-900/50 z-10"></div>
@@ -364,12 +364,12 @@
                         <span class="text-[11px] font-semibold text-white/80 tracking-wider">BEST BUSINESS LOANS</span>
                     </div>
                 </div>
-                <h1 class="font-grotesk text-[clamp(56px,8vw,120px)] leading-[1.05] tracking-tight text-white mb-6">SBA LOAN</h1>
+                <h1 class="font-grotesk text-[clamp(48px,8vw,90px)] leading-[1.05] tracking-tight text-white mb-6">SBA LOAN</h1>
                 <div class="w-24 h-1 bg-gradient-to-r from-[#c8e86a] to-[#1a7a4a] mx-auto mb-6"></div>
                 <p class="text-white/80 text-base max-w-2xl mx-auto leading-relaxed">Get the funding you need with our fast, flexible loan solutions. No hidden fees, no endless paperwork, and bad credit welcome.</p>
                 <div class="flex gap-4 justify-center flex-wrap mt-8">
-                    <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
-                    <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Learn More</a>
+                    <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                    <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Learn More</a>
                 </div>
             </div>
         </div>

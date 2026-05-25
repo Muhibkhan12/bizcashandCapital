@@ -190,21 +190,21 @@
 
     @include('header')
 
-    <!-- Hero Section -->
-    <section class="relative h-[70vh] min-h-[450px] flex items-center justify-center overflow-hidden">
+    <!-- Hero Section - Fixed with proper padding -->
+    <section class="relative min-h-[550px] md:min-h-[600px] flex items-center justify-center overflow-hidden pt-24 md:pt-28 pb-12 md:pb-16">
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80" alt="Commercial real estate and business financing - modern office building with financial growth concept" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-emerald-900/60 z-10"></div>
         </div>
         <div class="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 w-full text-center">
-            <h1 class="font-grotesk text-[clamp(48px,7vw,90px)] leading-[1.1] tracking-tight text-white mb-4">Commercial Loans</h1>
+            <h1 class="font-grotesk text-[clamp(42px,7vw,80px)] leading-[1.1] tracking-tight text-white mb-4">Commercial Loans</h1>
             <div class="w-24 h-1 bg-gradient-to-r from-[#c8e86a] to-[#1a7a4a] mx-auto mb-6"></div>
             <p class="text-white/80 text-base max-w-3xl mx-auto leading-relaxed">
                 Commercial loans are financing options that help businesses meet their financial freedom and accomplish certain goals. These loans can finance capital investments, buy merchandise, grow business operations, buy real estate, or expand business activities.
             </p>
             <div class="flex gap-4 justify-center flex-wrap mt-8">
-                <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
-                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-8 py-3.5 font-semibold text-sm transition-all duration-300">Get Free Consultation</a>
+                <a href="#" class="inline-flex items-center gap-2 bg-[#1a7a4a] hover:bg-[#0f5a38] text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Apply Now →</a>
+                <a href="#" class="inline-flex items-center gap-2 border border-white/30 hover:border-white/50 text-white px-6 py-3 sm:px-8 sm:py-3.5 font-semibold text-sm transition-all duration-300">Get Free Consultation</a>
             </div>
         </div>
     </section>
