@@ -36,6 +36,33 @@ class BlogController extends Controller
         return redirect()->route('create-blogs')->with('success','Blog Created Successfully');
     }
 
+    public function editBlogPage($id){
+        $blog = Blogs::findOrFail($id);
+        return view('admin.editBlog',compact('blog'));
+    }
+
+
+    // public function editBlog(Request $request, $id){
+    //         $blog = Blogs::findOrFail($id);
+
+    //         $validated = $request->validate([
+    //         'title' => 'required|string|max:255',
+    //         'slug' => 'required|string|max:255',
+    //         'content' => 'required|string',
+    //         'meta_description' => 'nullable|string|max:160',
+    //         'category' => 'required',
+    //         'image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+    //     ]);
+
+    //     if ($request->hasFile('image')) {
+    //         $validated['image'] = $request->file('image')->store('blogs', 'public');
+    //     }
+
+    //     $blog->update($validated);
+
+    //     return redirect()->back()->with('success', 'Blog updated successfully');
+    // }
+
     public function showAllBlogs(){
         $blogs = Blogs::all();
         return view('admin.allBlogs', compact('blogs'));

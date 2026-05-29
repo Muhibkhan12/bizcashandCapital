@@ -201,6 +201,8 @@
         .btn-edit {
             background: #eff6ff;
             color: #3b82f6;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-edit:hover {
@@ -216,36 +218,6 @@
         .btn-delete:hover {
             background: #fee2e2;
             transform: translateY(-1px);
-        }
-
-        /* Modern Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(4px);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal.active {
-            display: flex;
-            animation: fadeIn 0.2s ease;
-        }
-
-        .modal-content {
-            background: white;
-            max-width: 650px;
-            width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            border-radius: 20px !important;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
         /* Image Preview Modal */
@@ -290,34 +262,6 @@
 
         .close-preview:hover {
             color: #c8e86a;
-        }
-
-        /* Form Styles */
-        .form-input {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            border: 1px solid #e2e8e2;
-            background: white;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.875rem;
-            transition: all 0.2s ease;
-            outline: none;
-            border-radius: 12px !important;
-        }
-
-        .form-input:focus {
-            border-color: #1a7a4a;
-            box-shadow: 0 0 0 3px rgba(26, 122, 74, 0.1);
-        }
-
-        .form-label {
-            display: block;
-            font-size: 0.7rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #334155;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
         }
 
         /* Category Badge */
@@ -379,15 +323,33 @@
             border-color: #cbd5e1;
         }
 
-        /* Character counter */
-        .char-counter {
-            font-size: 0.65rem;
-            margin-top: 0.35rem;
-            text-align: right;
-            color: #64748b;
+        /* Modal for Delete */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
         }
-        .char-counter.near-limit { color: #eab308; }
-        .char-counter.over-limit { color: #dc2626; }
+
+        .modal.active {
+            display: flex;
+            animation: fadeIn 0.2s ease;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 400px;
+            width: 90%;
+            border-radius: 20px !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
     </style>
 </head>
 <body>
@@ -440,6 +402,7 @@
                                     <th>Title</th>
                                     <th>Category</th>
                                     <th>Meta Description</th>
+                                    <th>Status</th>
                                     <th>Date</th>
                                     <th>Actions</th>
                                 </tr>
@@ -449,9 +412,9 @@
                                 <tr>
                                     <td class="font-medium text-gray-700">{{ $data->id }}</td>
                                     <td>
-                                        <div class="blog-thumb" onclick="openImagePreview('{{ asset('storage/' . $data->image) }}', '{{ $data->title }}')">
+                                        <div class="blog-thumb" onclick="openImagePreview('{{ asset('storage/blogs/' . $data->image) }}', '{{ $data->title }}')">
                                             @if($data->image)
-                                                <img src="{{ asset('storage/' . $data->image) }}" alt="{{ $data->title }}">
+                                                <img src="{{ asset('storage/blogs/' . $data->image) }}" alt="{{ $data->title }}">
                                             @else
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.5">
                                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
@@ -474,10 +437,15 @@
                                             {{ Str::limit($data->meta_description ?? 'No meta description added', 80) }}
                                         </div>
                                     </td>
+                                    <td>
+                                        <span class="status-badge {{ ($data->status ?? 'draft') == 'published' ? 'status-published' : 'status-draft' }}">
+                                            {{ ucfirst($data->status ?? 'draft') }}
+                                        </span>
+                                    </td>
                                     <td class="text-sm text-gray-500">{{ $data->created_at->format('M d, Y') }}</td>
                                     <td>
                                         <div class="flex gap-2">
-                                            <button class="action-btn btn-edit edit-blog-btn" data-id="{{ $data->id }}">Edit</button>
+                                            <a href="{{ route('edit-blogs', $data->id) }}" class="action-btn btn-edit" style="text-decoration: none;">Edit</a>
                                             <button class="action-btn btn-delete delete-blog-btn" data-id="{{ $data->id }}">Delete</button>
                                         </div>
                                     </td>
@@ -516,75 +484,9 @@
     <img id="previewImage" src="" alt="Preview">
 </div>
 
-<!-- Modern Edit Modal -->
-<div id="editModal" class="modal">
-    <div class="modal-content">
-        <div class="flex justify-between items-center p-5 border-b border-gray-100">
-            <h2 class="text-xl font-bold font-['Space_Grotesk']">Edit Blog</h2>
-            <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
-        </div>
-        <form id="editBlogForm" method="POST" enctype="multipart/form-data" class="p-5">
-            @csrf
-            @method('PUT')
-            <input type="hidden" id="edit_blog_id" name="blog_id">
-            
-            <div class="mb-4">
-                <label class="form-label">Title *</label>
-                <input type="text" id="edit_title" name="title" class="form-input" required>
-            </div>
-
-            <div class="mb-4">
-                <label class="form-label">Slug *</label>
-                <input type="text" id="edit_slug" name="slug" class="form-input" required>
-            </div>
-
-            <div class="mb-4">
-                <label class="form-label">Category *</label>
-                <select id="edit_category" name="category" class="form-input" required>
-                    <option value="Business">Business</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Loans">Loans</option>
-                    <option value="SBA">SBA</option>
-                    <option value="Tips">Tips & Advice</option>
-                </select>
-            </div>
-
-            <div class="mb-4">
-                <label class="form-label">Featured Image</label>
-                <input type="file" id="edit_image" name="image" class="form-input" accept="image/*">
-                <div id="current_image_preview" class="mt-2"></div>
-            </div>
-
-            <div class="mb-4">
-                <label class="form-label">Meta Description (SEO)</label>
-                <textarea id="edit_meta_description" name="meta_description" rows="2" class="form-input" placeholder="Write a brief description for search engines (150-160 characters recommended)" maxlength="160"></textarea>
-                <div id="editMetaCharCounter" class="char-counter">0 / 160 characters</div>
-            </div>
-
-            <div class="mb-4">
-                <label class="form-label">Status</label>
-                <select id="edit_status" name="status" class="form-input">
-                    <option value="draft">Draft</option>
-                    <option value="published">Published</option>
-                </select>
-            </div>
-
-            <div class="mb-5">
-                <label class="form-label">Content *</label>
-                <textarea id="edit_content" name="content" rows="8" class="form-input" required></textarea>
-            </div>
-
-            <div class="flex gap-3 justify-end pt-3 border-t border-gray-100">
-                <button type="button" onclick="closeModal()" class="btn-secondary">Cancel</button>
-                <button type="submit" class="btn-primary">Update Blog</button>
-            </div>
-        </form>
-    </div>
-</div>
-
-<!-- Modern Delete Modal -->
+<!-- Delete Confirmation Modal -->
 <div id="deleteModal" class="modal">
-    <div class="modal-content" style="max-width: 400px;">
+    <div class="modal-content">
         <div class="text-center p-6">
             <div class="w-12 h-12 bg-red-100 rounded-full !rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2">
@@ -610,14 +512,7 @@
 <script>
     // Image Preview Functionality
     function openImagePreview(imageUrl, imageTitle) {
-        if (imageUrl && imageUrl !== '' && !imageUrl.includes('storage/blogs/') && imageUrl !== '#') {
-            const modal = document.getElementById('imagePreviewModal');
-            const previewImg = document.getElementById('previewImage');
-            previewImg.src = imageUrl;
-            previewImg.alt = imageTitle || 'Blog Image';
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        } else if (imageUrl && imageUrl.includes('storage/blogs/')) {
+        if (imageUrl && imageUrl !== '') {
             const modal = document.getElementById('imagePreviewModal');
             const previewImg = document.getElementById('previewImage');
             previewImg.src = imageUrl;
@@ -637,66 +532,11 @@
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeImagePreview();
-            closeModal();
             closeDeleteModal();
         }
     });
 
-    // Edit blog function with meta description
-    function editBlog(id) {
-        fetch(`/admin/blogs/${id}/edit`)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('edit_blog_id').value = data.id;
-                document.getElementById('edit_title').value = data.title;
-                document.getElementById('edit_slug').value = data.slug;
-                document.getElementById('edit_category').value = data.category;
-                document.getElementById('edit_status').value = data.status || 'draft';
-                document.getElementById('edit_content').value = data.content;
-                document.getElementById('edit_meta_description').value = data.meta_description || '';
-                
-                const metaDesc = document.getElementById('edit_meta_description');
-                const counter = document.getElementById('editMetaCharCounter');
-                const length = (metaDesc.value || '').length;
-                counter.textContent = length + ' / 160 characters';
-                
-                if (length > 160) counter.classList.add('over-limit');
-                else if (length > 150) counter.classList.add('near-limit');
-                else counter.classList.remove('near-limit', 'over-limit');
-                
-                if (data.image) {
-                    document.getElementById('current_image_preview').innerHTML = `
-                        <div class="flex items-center gap-3 p-2 bg-gray-50 rounded-xl">
-                            <img src="/storage/blogs/${data.image}" class="w-12 h-12 rounded-lg object-cover cursor-pointer" onclick="openImagePreview('/storage/blogs/${data.image}', '${data.title}')">
-                            <span class="text-xs text-gray-500">Current image (click to enlarge)</span>
-                        </div>
-                    `;
-                } else {
-                    document.getElementById('current_image_preview').innerHTML = '';
-                }
-                
-                document.getElementById('editBlogForm').action = `/admin/blogs/${id}`;
-                document.getElementById('editModal').classList.add('active');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error loading blog data');
-            });
-    }
-
-    const editMetaDesc = document.getElementById('edit_meta_description');
-    const editMetaCounter = document.getElementById('editMetaCharCounter');
-    
-    if (editMetaDesc && editMetaCounter) {
-        editMetaDesc.addEventListener('input', function() {
-            const length = this.value.length;
-            editMetaCounter.textContent = length + ' / 160 characters';
-            editMetaCounter.classList.remove('near-limit', 'over-limit');
-            if (length > 160) editMetaCounter.classList.add('over-limit');
-            else if (length > 150) editMetaCounter.classList.add('near-limit');
-        });
-    }
-
+    // Delete functionality
     let deleteId = null;
     
     function confirmDelete(id) {
@@ -710,25 +550,17 @@
         deleteId = null;
     }
     
-    function closeModal() {
-        document.getElementById('editModal').classList.remove('active');
-    }
-    
-    document.querySelectorAll('.edit-blog-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            editBlog(this.getAttribute('data-id'));
-        });
-    });
-    
+    // Handle delete button clicks
     document.querySelectorAll('.delete-blog-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             confirmDelete(this.getAttribute('data-id'));
         });
     });
     
+    // Close modal when clicking outside
     window.addEventListener('click', (e) => {
-        if (e.target === document.getElementById('editModal')) closeModal();
-        if (e.target === document.getElementById('deleteModal')) closeDeleteModal();
+        const deleteModal = document.getElementById('deleteModal');
+        if (e.target === deleteModal) closeDeleteModal();
     });
 </script>
 
