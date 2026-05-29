@@ -15,6 +15,7 @@ class BlogController extends Controller
             'title'=>'required|string|min:5|max:255',
             'slug' => 'required|string|max:255|unique:blogs,slug',
             'content'=>'required|string|min:100',
+            'meta_description'=>'required|string|min:15|max:160',
             'image'=>'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
             'category'=> 'required|in:Business,Finance,Loans,SBA,TipsnAdvice',
         ]);
@@ -28,6 +29,7 @@ class BlogController extends Controller
             'slug' => $validate_blogs['slug'],
             'content' => $validate_blogs['content'],
             'image' => $imagePath,
+            'meta_description' => $validate_blogs['meta_description'],
             'category' => $validate_blogs['category'],
         ]);
 
@@ -37,8 +39,11 @@ class BlogController extends Controller
     public function showAllBlogs(){
         $blogs = Blogs::all();
         return view('admin.allBlogs', compact('blogs'));
-    }   
-    
+    }
 
+    public function manageAllBlogs(){
+        $blogs = Blogs::all();
+        return view('admin.manage-blogs', compact('blogs'));
+    }
 
 }

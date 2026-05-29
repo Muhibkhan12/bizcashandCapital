@@ -291,6 +291,7 @@
             <div class="submenu open" id="blogSubmenu">
                 <a href="{{ route('show-blogs')}}" class="menu-item" ><span> All Blogs</span></a>
                 <a href="{{ route('create-blogs')}}" class="menu-item" ><span> Create New</span></a>
+                <a href="{{ route('manage-all-blogs')}}" class="menu-item" ><span> Manage Blogs</span></a>
             </div>
 
             <!-- Loan Applications -->

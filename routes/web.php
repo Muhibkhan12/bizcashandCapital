@@ -100,7 +100,7 @@ Route::get('/create-blogs',function(){
 
 Route::post('/add-blogs',[BlogController::class,'createBlogs'])->name('add-blogs');
 Route::get('/all-blogs',[BlogController::class,'showAllBlogs'])->name('show-blogs');
-
+Route::get('/manage-blogs',[BlogController::class,'manageAllBlogs'])->name('manage-all-blogs');
 // Route::get('/all-blogs',function(){
 //     return view('admin.allBlogs');
 // })->name('all-blogs');

@@ -12,5 +12,6 @@ class Blogs extends Model
         'content',
         'image',
         'category',
+        'meta_description',
     ];
 }

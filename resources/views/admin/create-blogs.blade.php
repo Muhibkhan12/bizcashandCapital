@@ -92,6 +92,7 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
+            text-decoration: none;
         }
 
         .btn-secondary:hover {
@@ -175,6 +176,20 @@
         .remove-image-btn:hover {
             background: #b91c1c;
         }
+
+        /* Character counter for meta description */
+        .char-counter {
+            font-size: 0.7rem;
+            margin-top: 0.35rem;
+            text-align: right;
+            color: #64748b;
+        }
+        .char-counter.near-limit {
+            color: #eab308;
+        }
+        .char-counter.over-limit {
+            color: #dc2626;
+        }
     </style>
 </head>
 <body>
@@ -257,11 +272,22 @@
                             </div>
                             
                             <!-- Image Preview -->
-                            <div id="imagePreview" style="margin-top: 1rem; display: none; position: relative; display: inline-block;">
+                            <div id="imagePreview" style="margin-top: 1rem; display: none;">
                                 <img id="previewImg" src="" alt="Preview" style="max-width: 100%; max-height: 250px; object-fit: cover; border: 1px solid #e2e8e2;">
                                 <button type="button" id="removeImageBtn" class="remove-image-btn">×</button>
                             </div>
                             @error('image')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <!-- META DESCRIPTION (SEO) - NEW FIELD ADDED -->
+                        <div style="margin-bottom: 1.5rem;">
+                            <label class="form-label">META DESCRIPTION (SEO)</label>
+                            <textarea id="meta_description" name="meta_description" rows="3" class="form-input" placeholder="Write a brief description for search engines (150-160 characters recommended)" maxlength="160">{{ old('meta_description') }}</textarea>
+                            <div id="metaCharCounter" class="char-counter">0 / 160 characters</div>
+                            <p style="font-size: 0.7rem; color: #9ca3af; margin-top: 0.25rem;">This description appears in search engine results. Keep it between 150-160 characters for best SEO.</p>
+                            @error('meta_description')
                                 <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                             @enderror
                         </div>
@@ -277,14 +303,13 @@
 
                         <!-- Buttons -->
                         <div style="display: flex; gap: 1rem; justify-content: flex-end; border-top: 1px solid #e2e8e2; padding-top: 1.5rem;">
-                            <a  class="btn-secondary" style="text-decoration: none;">Cancel</a>
+                            <a class="btn-secondary" style="text-decoration: none;">Cancel</a>
                             <button type="submit" class="btn-primary">Publish Blog</button>
                         </div>
                     </form>
                 </div>
             </div>
         </main>
-
     </div>
 </div>
 
@@ -315,9 +340,11 @@
     const removeImageBtn = document.getElementById('removeImageBtn');
     
     // Click to upload
-    fileUploadArea.addEventListener('click', function() {
-        imageInput.click();
-    });
+    if (fileUploadArea) {
+        fileUploadArea.addEventListener('click', function() {
+            imageInput.click();
+        });
+    }
     
     // Handle file selection
     imageInput.addEventListener('change', function(e) {
@@ -328,46 +355,45 @@
     });
     
     // Drag and drop functionality
-    fileUploadArea.addEventListener('dragover', function(e) {
-        e.preventDefault();
-        fileUploadArea.classList.add('drag-over');
-    });
-    
-    fileUploadArea.addEventListener('dragleave', function(e) {
-        e.preventDefault();
-        fileUploadArea.classList.remove('drag-over');
-    });
-    
-    fileUploadArea.addEventListener('drop', function(e) {
-        e.preventDefault();
-        fileUploadArea.classList.remove('drag-over');
+    if (fileUploadArea) {
+        fileUploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            fileUploadArea.classList.add('drag-over');
+        });
         
-        const file = e.dataTransfer.files[0];
-        if (file && file.type.startsWith('image/')) {
-            validateAndPreview(file);
-            imageInput.files = e.dataTransfer.files;
-        } else {
-            alert('Please drop an image file (JPG, PNG, GIF, WebP)');
-        }
-    });
+        fileUploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            fileUploadArea.classList.remove('drag-over');
+        });
+        
+        fileUploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            fileUploadArea.classList.remove('drag-over');
+            
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                validateAndPreview(file);
+                imageInput.files = e.dataTransfer.files;
+            } else {
+                alert('Please drop an image file (JPG, PNG, GIF, WebP)');
+            }
+        });
+    }
     
     // Validate and preview image
     function validateAndPreview(file) {
-        // Validate file type
         const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
         if (!allowedTypes.includes(file.type)) {
             alert('Invalid file type. Please upload JPG, PNG, GIF, or WebP images only.');
             return;
         }
         
-        // Validate file size (max 5MB)
         const maxSize = 5 * 1024 * 1024;
         if (file.size > maxSize) {
             alert('File is too large. Maximum size is 5MB.');
             return;
         }
         
-        // Preview image
         const reader = new FileReader();
         reader.onload = function(e) {
             previewImg.src = e.target.result;
@@ -378,12 +404,36 @@
     }
     
     // Remove image
-    removeImageBtn.addEventListener('click', function() {
-        imageInput.value = '';
-        imagePreview.style.display = 'none';
-        fileUploadArea.style.display = 'block';
-        previewImg.src = '';
-    });
+    if (removeImageBtn) {
+        removeImageBtn.addEventListener('click', function() {
+            imageInput.value = '';
+            imagePreview.style.display = 'none';
+            fileUploadArea.style.display = 'block';
+            previewImg.src = '';
+        });
+    }
+    
+    // Meta description character counter
+    const metaDescription = document.getElementById('meta_description');
+    const metaCharCounter = document.getElementById('metaCharCounter');
+    
+    if (metaDescription && metaCharCounter) {
+        function updateMetaCounter() {
+            const length = metaDescription.value.length;
+            const maxLength = 160;
+            metaCharCounter.textContent = length + ' / ' + maxLength + ' characters';
+            
+            metaCharCounter.classList.remove('near-limit', 'over-limit');
+            if (length > maxLength) {
+                metaCharCounter.classList.add('over-limit');
+            } else if (length > 150) {
+                metaCharCounter.classList.add('near-limit');
+            }
+        }
+        
+        metaDescription.addEventListener('input', updateMetaCounter);
+        updateMetaCounter();
+    }
     
     // Form validation before submit
     const form = document.getElementById('createBlogForm');

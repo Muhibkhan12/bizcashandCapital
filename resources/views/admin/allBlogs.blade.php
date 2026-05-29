@@ -107,14 +107,14 @@
                     @foreach($blogs as $data)
                     <!-- Blog 1: Business Loan -->
                     <div class="blog-card">
-                        <img src="{{ asset('blogs/public' . $data->image) }}" alt="{{ $data->title }}" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="{{ asset('storage/' . $data->image) }}" alt="{{ $data->title }}" style="width: 100%; height: 220px; object-fit: cover;">
                         <div style="padding: 1.25rem;">
                             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
                                 <span style="background: #e8f0e8; color: #1a7a4a; font-size: 0.65rem; font-weight: 700; padding: 0.25rem 0.75rem;">{{$data->category}}</span>
                                 <span style="font-size: 0.7rem; color: #9ca3af;">5 min read</span>
                             </div>
                             <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif; line-height: 1.3;">{{$data->title}}</h3>
-                            <p style="color: #6b7280; font-size: 0.8rem; margin-bottom: 0.5rem;">January 15, 2024 • 1,250 views</p>
+                            <p style="color: #6b7280; font-size: 0.8rem; margin-bottom: 0.5rem;">{{ $data->created_at->format('F jS, Y') }}</p>
                             <p style="color: #4a5568; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">Learn the steps to secure funding even with a low credit score. Discover alternative lenders, improve your chances, and get approved for the capital you need.</p>
                             <div style="display: flex; justify-content: flex-end;">
                                 <button class="read-more-btn" style="background: transparent; border: 1px solid #1a7a4a; color: #1a7a4a; padding: 0.5rem 1.25rem; font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.3s ease;">
@@ -124,45 +124,6 @@
                         </div>
                     </div>
                     @endforeach
-                    
-
-                    <!-- Blog 2: SBA Loan -->
-                    <div class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&h=400&fit=crop" alt="SBA Loan" style="width: 100%; height: 220px; object-fit: cover;">
-                        <div style="padding: 1.25rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                                <span style="background: #e8f0e8; color: #1a7a4a; font-size: 0.65rem; font-weight: 700; padding: 0.25rem 0.75rem;">SBA</span>
-                                <span style="font-size: 0.7rem; color: #9ca3af;">7 min read</span>
-                            </div>
-                            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif; line-height: 1.3;">Top 5 SBA Loan Requirements for 2024</h3>
-                            <p style="color: #6b7280; font-size: 0.8rem; margin-bottom: 0.5rem;">January 20, 2024 • 890 views</p>
-                            <p style="color: #4a5568; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">Everything you need to know about SBA loan qualifications. From credit scores to business plans, we cover all the requirements you need to meet.</p>
-                            <div style="display: flex; justify-content: flex-end;">
-                                <button class="read-more-btn" style="background: transparent; border: 1px solid #1a7a4a; color: #1a7a4a; padding: 0.5rem 1.25rem; font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.3s ease;">
-                                    Read More →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Blog 3: Construction Loans -->
-                    <div class="blog-card">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=400&fit=crop" alt="Construction Loans" style="width: 100%; height: 220px; object-fit: cover;">
-                        <div style="padding: 1.25rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
-                                <span style="background: #e8f0e8; color: #1a7a4a; font-size: 0.65rem; font-weight: 700; padding: 0.25rem 0.75rem;">LOANS</span>
-                                <span style="font-size: 0.7rem; color: #9ca3af;">8 min read</span>
-                            </div>
-                            <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; font-family: 'Space Grotesk', sans-serif; line-height: 1.3;">Construction Loans: A Complete Guide</h3>
-                            <p style="color: #6b7280; font-size: 0.8rem; margin-bottom: 0.5rem;">January 25, 2024 • 2,340 views</p>
-                            <p style="color: #4a5568; font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">Understanding construction loans and how to apply. Learn about draw schedules, interest reserves, and lender requirements for your building project.</p>
-                            <div style="display: flex; justify-content: flex-end;">
-                                <button class="read-more-btn" style="background: transparent; border: 1px solid #1a7a4a; color: #1a7a4a; padding: 0.5rem 1.25rem; font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.3s ease;">
-                                    Read More →
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </main>
