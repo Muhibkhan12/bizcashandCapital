@@ -121,6 +121,60 @@
                 display: none;
             }
         }
+
+        /* File upload styling */
+        .file-upload-area {
+            border: 2px dashed #e2e8e2;
+            background: #f8fafc;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-area:hover {
+            border-color: #1a7a4a;
+            background: #f0fdf4;
+        }
+
+        .file-upload-area.drag-over {
+            border-color: #1a7a4a;
+            background: #dcfce7;
+        }
+
+        #imagePreview {
+            margin-top: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        #previewImg {
+            max-width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border: 1px solid #e2e8e2;
+        }
+
+        .remove-image-btn {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #dc2626;
+            color: white;
+            border: none;
+            width: 28px;
+            height: 28px;
+            border-radius: 50% !important;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .remove-image-btn:hover {
+            background: #b91c1c;
+        }
     </style>
 </head>
 <body>
@@ -150,18 +204,26 @@
         <main style="padding: 2rem;">
             <div style="max-width: 900px; margin: 0 auto;">
                 <div style="background: white; border: 1px solid #e2e8e2; padding: 2rem;">
-                    <form id="createBlogForm">
+                    <form id="createBlogForm" action="{{ route('add-blogs') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        
                         <!-- Title -->
                         <div style="margin-bottom: 1.5rem;">
                             <label class="form-label">TITLE *</label>
-                            <input type="text" id="title" name="title" class="form-input" placeholder="Enter blog title" required>
+                            <input type="text" id="title" name="title" class="form-input" placeholder="Enter blog title" value="{{ old('title') }}" required>
+                            @error('title')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Slug -->
                         <div style="margin-bottom: 1.5rem;">
                             <label class="form-label">SLUG *</label>
-                            <input type="text" id="slug" name="slug" class="form-input" placeholder="enter-blog-title-here" required>
+                            <input type="text" id="slug" name="slug" class="form-input" placeholder="enter-blog-title-here" value="{{ old('slug') }}" required>
                             <p style="font-size: 0.7rem; color: #9ca3af; margin-top: 0.35rem;">URL-friendly version of the title (auto-generated)</p>
+                            @error('slug')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Category -->
@@ -169,35 +231,53 @@
                             <label class="form-label">CATEGORY *</label>
                             <select id="category" name="category" class="form-input" required>
                                 <option value="">Select a category</option>
-                                <option value="Business">Business</option>
-                                <option value="Finance">Finance</option>
-                                <option value="Loans">Loans</option>
-                                <option value="SBA">SBA</option>
-                                <option value="Tips">Tips & Advice</option>
+                                <option value="Business" {{ old('category') == 'Business' ? 'selected' : '' }}>Business</option>
+                                <option value="Finance" {{ old('category') == 'Finance' ? 'selected' : '' }}>Finance</option>
+                                <option value="Loans" {{ old('category') == 'Loans' ? 'selected' : '' }}>Loans</option>
+                                <option value="SBA" {{ old('category') == 'SBA' ? 'selected' : '' }}>SBA</option>
+                                <option value="Tips" {{ old('category') == 'Tips' ? 'selected' : '' }}>Tips & Advice</option>
                             </select>
+                            @error('category')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
-                        <!-- Image URL -->
+                        <!-- Image Upload -->
                         <div style="margin-bottom: 1.5rem;">
-                            <label class="form-label">FEATURED IMAGE URL</label>
-                            <input type="url" id="image" name="image" class="form-input" placeholder="https://images.unsplash.com/...">
-                            <p style="font-size: 0.7rem; color: #9ca3af; margin-top: 0.35rem;">Enter a valid image URL (optional)</p>
-                        </div>
-
-                        <!-- Image Preview -->
-                        <div id="imagePreview" style="margin-bottom: 1.5rem; display: none;">
-                            <img id="previewImg" src="" alt="Preview" style="max-width: 100%; height: auto; max-height: 200px; border: 1px solid #e2e8e2;">
+                            <label class="form-label">FEATURED IMAGE</label>
+                            <div class="file-upload-area" id="fileUploadArea">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1a7a4a" stroke-width="1.5" style="margin: 0 auto 0.5rem;">
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                    <polyline points="17 8 12 3 7 8"/>
+                                    <line x1="12" y1="3" x2="12" y2="15"/>
+                                </svg>
+                                <p style="color: #64748b; font-size: 0.875rem;">Click or drag & drop to upload image</p>
+                                <p style="color: #94a3b8; font-size: 0.7rem; margin-top: 0.25rem;">Supports: JPG, PNG, GIF, WebP (Max 5MB)</p>
+                                <input type="file" id="image" name="image" accept="image/*" style="display: none;">
+                            </div>
+                            
+                            <!-- Image Preview -->
+                            <div id="imagePreview" style="margin-top: 1rem; display: none; position: relative; display: inline-block;">
+                                <img id="previewImg" src="" alt="Preview" style="max-width: 100%; max-height: 250px; object-fit: cover; border: 1px solid #e2e8e2;">
+                                <button type="button" id="removeImageBtn" class="remove-image-btn">×</button>
+                            </div>
+                            @error('image')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Content -->
                         <div style="margin-bottom: 1.5rem;">
                             <label class="form-label">CONTENT *</label>
-                            <textarea id="content" name="content" rows="10" class="form-input" placeholder="Write your blog content here..." required></textarea>
+                            <textarea id="content" name="content" rows="12" class="form-input" placeholder="Write your blog content here..." required>{{ old('content') }}</textarea>
+                            @error('content')
+                                <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                            @enderror
                         </div>
 
                         <!-- Buttons -->
                         <div style="display: flex; gap: 1rem; justify-content: flex-end; border-top: 1px solid #e2e8e2; padding-top: 1.5rem;">
-                            <button type="button" id="cancelBtn" class="btn-secondary">Cancel</button>
+                            <a  class="btn-secondary" style="text-decoration: none;">Cancel</a>
                             <button type="submit" class="btn-primary">Publish Blog</button>
                         </div>
                     </form>
@@ -205,10 +285,6 @@
             </div>
         </main>
 
-        <!-- Footer -->
-        <footer style="background: #111a13; color: #9ca3af; padding: 1.5rem 2rem; text-align: center; font-size: 0.75rem; border-top: 1px solid #2d3e2d;">
-            <div style="max-width: 1280px; margin: 0 auto;">© 2025 BizCashAndCapital — Financial Empowerment. All rights reserved.</div>
-        </footer>
     </div>
 </div>
 
@@ -221,9 +297,9 @@
         return text
             .toLowerCase()
             .trim()
-            .replace(/[^\w\s-]/g, '')  // Remove special characters
-            .replace(/\s+/g, '-')       // Replace spaces with hyphens
-            .replace(/-+/g, '-');       // Remove multiple hyphens
+            .replace(/[^\w\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-');
     }
     
     titleInput.addEventListener('input', function() {
@@ -231,93 +307,97 @@
         slugInput.value = generatedSlug;
     });
     
-    // Image preview
+    // Image upload functionality
+    const fileUploadArea = document.getElementById('fileUploadArea');
     const imageInput = document.getElementById('image');
     const imagePreview = document.getElementById('imagePreview');
     const previewImg = document.getElementById('previewImg');
+    const removeImageBtn = document.getElementById('removeImageBtn');
     
-    imageInput.addEventListener('input', function() {
-        const url = this.value;
-        if (url && (url.startsWith('http://') || url.startsWith('https://'))) {
-            previewImg.src = url;
-            imagePreview.style.display = 'block';
-        } else {
-            imagePreview.style.display = 'none';
+    // Click to upload
+    fileUploadArea.addEventListener('click', function() {
+        imageInput.click();
+    });
+    
+    // Handle file selection
+    imageInput.addEventListener('change', function(e) {
+        const file = e.target.files[0];
+        if (file) {
+            validateAndPreview(file);
         }
     });
     
-    // Form submission
-    const form = document.getElementById('createBlogForm');
-    
-    form.addEventListener('submit', function(e) {
+    // Drag and drop functionality
+    fileUploadArea.addEventListener('dragover', function(e) {
         e.preventDefault();
+        fileUploadArea.classList.add('drag-over');
+    });
+    
+    fileUploadArea.addEventListener('dragleave', function(e) {
+        e.preventDefault();
+        fileUploadArea.classList.remove('drag-over');
+    });
+    
+    fileUploadArea.addEventListener('drop', function(e) {
+        e.preventDefault();
+        fileUploadArea.classList.remove('drag-over');
         
-        // Get form data
-        const title = document.getElementById('title').value;
-        const slug = document.getElementById('slug').value;
-        const category = document.getElementById('category').value;
-        const image = document.getElementById('image').value;
-        const content = document.getElementById('content').value;
-        
-        // Validation
-        if (!title || !slug || !category || !content) {
-            alert('Please fill in all required fields (*)');
+        const file = e.dataTransfer.files[0];
+        if (file && file.type.startsWith('image/')) {
+            validateAndPreview(file);
+            imageInput.files = e.dataTransfer.files;
+        } else {
+            alert('Please drop an image file (JPG, PNG, GIF, WebP)');
+        }
+    });
+    
+    // Validate and preview image
+    function validateAndPreview(file) {
+        // Validate file type
+        const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+        if (!allowedTypes.includes(file.type)) {
+            alert('Invalid file type. Please upload JPG, PNG, GIF, or WebP images only.');
             return;
         }
         
-        // Create blog object
-        const blogData = {
-            title: title,
-            slug: slug,
-            category: category,
-            image: image || 'https://via.placeholder.com/800x400?text=No+Image',
-            content: content,
-            date: new Date().toISOString().split('T')[0],
-            status: 'published'
+        // Validate file size (max 5MB)
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+            alert('File is too large. Maximum size is 5MB.');
+            return;
+        }
+        
+        // Preview image
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            previewImg.src = e.target.result;
+            imagePreview.style.display = 'inline-block';
+            fileUploadArea.style.display = 'none';
         };
-        
-        console.log('Blog Data:', blogData);
-        
-        // Here you would normally send this to your backend
-        // Example fetch request (uncomment when backend is ready):
-        /*
-        fetch('/api/admin/blogs', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            },
-            body: JSON.stringify(blogData)
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert('Blog created successfully!');
-                window.location.href = '/admin/blogs';
-            } else {
-                alert('Error: ' + data.message);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred while creating the blog.');
-        });
-        */
-        
-        // For demo purposes - show success message
-        alert('Blog created successfully!\n\nTitle: ' + title + '\nSlug: ' + slug + '\nCategory: ' + category);
-        
-        // Optionally reset form
-        // form.reset();
-        // imagePreview.style.display = 'none';
+        reader.readAsDataURL(file);
+    }
+    
+    // Remove image
+    removeImageBtn.addEventListener('click', function() {
+        imageInput.value = '';
+        imagePreview.style.display = 'none';
+        fileUploadArea.style.display = 'block';
+        previewImg.src = '';
     });
     
-    // Cancel button
-    const cancelBtn = document.getElementById('cancelBtn');
-    cancelBtn.addEventListener('click', function() {
-        if (confirm('Are you sure you want to cancel? All unsaved changes will be lost.')) {
-            form.reset();
-            imagePreview.style.display = 'none';
+    // Form validation before submit
+    const form = document.getElementById('createBlogForm');
+    
+    form.addEventListener('submit', function(e) {
+        const title = document.getElementById('title').value;
+        const slug = document.getElementById('slug').value;
+        const category = document.getElementById('category').value;
+        const content = document.getElementById('content').value;
+        
+        if (!title || !slug || !category || !content) {
+            e.preventDefault();
+            alert('Please fill in all required fields (*)');
+            return false;
         }
     });
 </script>

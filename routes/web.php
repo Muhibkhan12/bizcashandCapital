@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogController;
+use App\Models\Blogs;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -75,8 +77,6 @@ Route::get('/apply-now',function(){
 })->name('apply-loan');
 
 
-// FOR ADMIN
-
 Route::get('get-admin-access-for-bcac', function(){
     return view('admin.login');
 });
@@ -93,9 +93,14 @@ Route::get('/change-password',function(){
 Route::get('/sidebar',function(){
     return view('admin.sidebar');
 });
-Route::get('/all-blogs',function(){
-    return view('admin.allBlogs');
-})->name('all-blogs');
+
 Route::get('/create-blogs',function(){
     return view('admin.create-blogs');
 })->name('create-blogs');
+
+Route::post('/add-blogs',[BlogController::class,'createBlogs'])->name('add-blogs');
+Route::get('/all-blogs',[BlogController::class,'showAllBlogs'])->name('show-blogs');
+
+// Route::get('/all-blogs',function(){
+//     return view('admin.allBlogs');
+// })->name('all-blogs');

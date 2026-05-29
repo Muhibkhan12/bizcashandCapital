@@ -289,7 +289,7 @@
                 </svg>
             </button>
             <div class="submenu open" id="blogSubmenu">
-                <a href="{{ route('all-blogs')}}" class="menu-item" ><span> All Blogs</span></a>
+                <a href="{{ route('show-blogs')}}" class="menu-item" ><span> All Blogs</span></a>
                 <a href="{{ route('create-blogs')}}" class="menu-item" ><span> Create New</span></a>
             </div>
 
