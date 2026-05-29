@@ -80,12 +80,22 @@ Route::get('/apply-now',function(){
 Route::get('get-admin-access-for-bcac', function(){
     return view('admin.login');
 });
+
+
 Route::get('/admin-dashboard',function(){
     return view('admin.dashboard');
-});
+})->name('admin-main-page');
+
+
 Route::get('/change-password',function(){
     return view('admin.changePassword');
 });
 Route::get('/sidebar',function(){
     return view('admin.sidebar');
 });
+Route::get('/all-blogs',function(){
+    return view('admin.allBlogs');
+})->name('all-blogs');
+Route::get('/create-blogs',function(){
+    return view('admin.create-blogs');
+})->name('create-blogs');
