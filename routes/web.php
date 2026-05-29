@@ -86,4 +86,6 @@ Route::get('/admin-dashboard',function(){
 Route::get('/change-password',function(){
     return view('admin.changePassword');
 });
-// Route::get('/admin-dashboard',[])
+Route::get('/sidebar',function(){
+    return view('admin.sidebar');
+});
